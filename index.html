@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Formulare Übersicht</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Formulare Übersicht</h1>
+
+<input type="text" id="search" placeholder="Formular suchen..." onkeyup="searchFormular()">
+
+<div id="app"></div>
+
+<script>
+let data = null;
+fetch('formulare.json')
+  .then(response => response.json())
+  .then(json => {
+    data = json;
+    renderDemosysteme();
+  });
+
+function renderDemosysteme() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  data.demosysteme.forEach(ds => {
+    const div = document.createElement('div');
+    div.className = 'system';
+    div.textContent = ds.name;
+    div.onclick = () => renderFormulare(ds);
+    app.appendChild(div);
+  });
+}
+
+function renderFormulare(system) {
+  const app = document.getElementById('app');
+  app.innerHTML = `<h2>${system.name}</h2><button onclick="renderDemosysteme()">← Zurück</button>`;
+  system.formulare.forEach(f => {
+    const div = document.createElement('div');
+    div.className = 'formular';
+    div.textContent = f.name;
+    div.onclick = () => renderItems(system, f);
+    app.appendChild(div);
+  });
+}
+
+function renderItems(system, formular) {
+  const app = document.getElementById('app');
+  app.innerHTML = `<h2>${formular.name}</h2><button onclick="renderFormulare({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>`;
+  const ul = document.createElement('ul');
+  ul.className = 'items';
+  formular.items.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+  app.appendChild(ul);
+}
+
+function searchFormular() {
+  const term = document.getElementById('search').value.toLowerCase();
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  if (!term) return renderDemosysteme();
+  data.demosysteme.forEach(ds => {
+    ds.formulare.forEach(f => {
+      if (f.name.toLowerCase().includes(term) || f.items.some(i => i.toLowerCase().includes(term))) {
+        const div = document.createElement('div');
+        div.textContent = `${f.name} (System: ${ds.name})`;
+        app.appendChild(div);
+      }
+    });
+  });
+}
+</script>
+
+</body>
+</html>

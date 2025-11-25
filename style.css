@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.system, .formular {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.items {
+  margin-left: 20px;
+}
+
+#search {
+  margin-bottom: 20px;
+  width: 300px;
+  padding: 5px;
+}

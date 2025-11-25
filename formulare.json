@@ -1,0 +1,31 @@
+{
+  "demosysteme": [
+    {
+      "id": "pflege",
+      "name": "Pflege-Demosystem",
+      "formulare": [
+        {
+          "id": "wochenbett",
+          "name": "Wochenbettvisite",
+          "items": ["Fundusstand", "Blutung", "MBE", "Stillen"]
+        },
+        {
+          "id": "anamnese",
+          "name": "Anamnese",
+          "items": ["Vorerkrankungen", "Medikamente", "Allergien"]
+        }
+      ]
+    },
+    {
+      "id": "arzt",
+      "name": "Ärzte-Demosystem",
+      "formulare": [
+        {
+          "id": "aufnahme",
+          "name": "Ärztliche Aufnahme",
+          "items": ["Anamnese", "Diagnosen", "Befunde"]
+        }
+      ]
+    }
+  ]
+}
