@@ -2007,6 +2007,428 @@
           "items": []
         }
       ]
+    },
+    {
+      "id": "pkd",
+      "name": "PKD",
+      "url": "pkd.careit.one",
+      "formulare": [
+        {
+          "id": "CareIT24HEKG",
+          "name": "24h-EKG",
+          "items": []
+        },
+        {
+          "id": "CareIT24HRR",
+          "name": "24h-RR",
+          "items": []
+        },
+        {
+          "id": "CareITAST",
+          "name": "Aphasie-Schnell-Test (AST)",
+          "items": []
+        },
+        {
+          "id": "CareITApneascreening",
+          "name": "Apnoe Screening",
+          "items": []
+        },
+        {
+          "id": "CareIT_DEMMI",
+          "name": "de Morton Mobility Index (DEMMI)",
+          "items": []
+        },
+        {
+          "id": "CareITDIAS",
+          "name": "DIA-S",
+          "items": []
+        },
+        {
+          "id": "CareITBVC",
+          "name": "Die Brøset-Violence-Checkliste (BVC)",
+          "items": []
+        },
+        {
+          "id": "CareIT_EAT",
+          "name": "EAT-10 Dysphagie-Screeningbogen",
+          "items": []
+        },
+        {
+          "id": "CareITEEG",
+          "name": "EEG",
+          "items": []
+        },
+        {
+          "id": "CareITEKG",
+          "name": "EKG",
+          "items": []
+        },
+        {
+          "id": "CareITELEKRPHY",
+          "name": "Elektrophysiologie",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfoIC",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfo",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITDischargeManagementsempa",
+          "name": "Entlassmanagement",
+          "items": []
+        },
+        {
+          "id": "CareITEPIKAS",
+          "name": "Epikrise",
+          "items": []
+        },
+        {
+          "id": "CareITEWS2",
+          "name": "EWS",
+          "items": []
+        },
+        {
+          "id": "CareITExternalConsultation",
+          "name": "Externes Konsil",
+          "items": []
+        },
+        {
+          "id": "CareITFEES",
+          "name": "FEES",
+          "items": []
+        },
+        {
+          "id": "CareITFruehrehaBarthelIndex",
+          "name": "Frühreha - BarthelIndex",
+          "items": []
+        },
+        {
+          "id": "CareITGCSRitz",
+          "name": "GCS modifiziert nach Ritz et al.",
+          "items": []
+        },
+        {
+          "id": "CAREITHAEMOCCULT",
+          "name": "Haemoccult",
+          "items": []
+        },
+        {
+          "id": "CareITINTSON",
+          "name": "Internistische Sonographie",
+          "items": []
+        },
+        {
+          "id": "CareITNK",
+          "name": "Internistisches Konsil",
+          "items": []
+        },
+        {
+          "id": "CareITAdmin_ISO_NEW",
+          "name": "Isolierung NEU",
+          "items": []
+        },
+        {
+          "id": "CareITLDopaTest",
+          "name": "L-Dopa-Test",
+          "items": []
+        },
+        {
+          "id": "CATREITLIQOURPUNKTION",
+          "name": "Liquorpunktion",
+          "items": []
+        },
+        {
+          "id": "CareITLOGOET",
+          "name": "Logopädie",
+          "items": []
+        },
+        {
+          "id": "CareITLUFU",
+          "name": "LuFu-Test",
+          "items": []
+        },
+        {
+          "id": "CareITMSP",
+          "name": "Maßnahmen zur Sturzprophylaxe",
+          "items": []
+        },
+        {
+          "id": "CareITMDNURS",
+          "name": "MD Dokumentation -Pflege-",
+          "items": []
+        },
+        {
+          "id": "CareITMedicine_Anamnesis",
+          "name": "Medizinische Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareIT_MNA",
+          "name": "Mini Nutritional Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITMMSTP",
+          "name": "MMST",
+          "items": []
+        },
+        {
+          "id": "CareITMOCA",
+          "name": "MOCA",
+          "items": []
+        },
+        {
+          "id": "CareITMOSSLEEP",
+          "name": "MOS-Sleep",
+          "items": []
+        },
+        {
+          "id": "CareITMRSAMRESCREENING",
+          "name": "MRSA MRE - Screening",
+          "items": []
+        },
+        {
+          "id": "CareITMSLT",
+          "name": "Multipler Schlaf-Latenz-Test",
+          "items": []
+        },
+        {
+          "id": "CareITNPB",
+          "name": "Neuropsychologische Testung",
+          "items": []
+        },
+        {
+          "id": "CareITNEUSON",
+          "name": "Neurosonographie",
+          "items": []
+        },
+        {
+          "id": "CareITNGASR",
+          "name": "NGASR-Skala",
+          "items": []
+        },
+        {
+          "id": "CareITNRS_SEMPA",
+          "name": "NRS",
+          "items": []
+        },
+        {
+          "id": "CareITNUDESC",
+          "name": "NU-DESC (Nursing Delirium Screening Scale)",
+          "items": []
+        },
+        {
+          "id": "CareITSKPDSS",
+          "name": "Parkinson-Schlafskala",
+          "items": []
+        },
+        {
+          "id": "CareITVerlegungsberichtSempa",
+          "name": "Pflegeüberleitungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITPSG",
+          "name": "Polysomnographie",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20E_NEU",
+          "name": "PPR 2.0 E",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20F",
+          "name": "PPR 2.0 F",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20J",
+          "name": "PPR 2.0 J",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20K",
+          "name": "PPR 2.0 K",
+          "items": []
+        },
+        {
+          "id": "CareITPSPRS",
+          "name": "PSP Rating Scale",
+          "items": []
+        },
+        {
+          "id": "CareITRADREQ",
+          "name": "Radiologieanforderung",
+          "items": []
+        },
+        {
+          "id": "CareITRWT",
+          "name": "Regensburger Wortflüssigkeits-Test",
+          "items": []
+        },
+        {
+          "id": "CareITIRLS",
+          "name": "Restless Legs Fragebogen (IRLS)",
+          "items": []
+        },
+        {
+          "id": "CareITSMELLTEST",
+          "name": "Riechtest",
+          "items": []
+        },
+        {
+          "id": "CareITSCHELLONGTEST",
+          "name": "Schellong-Test",
+          "items": []
+        },
+        {
+          "id": "CareITSDQPD",
+          "name": "SDQ Schluckskala",
+          "items": []
+        },
+        {
+          "id": "CareITBarthelIndexSempa",
+          "name": "Sempa - Barthel-Index",
+          "items": []
+        },
+        {
+          "id": "CareITExBarthelIndexSempa",
+          "name": "Sempa - Barthel-Index Erweitert",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkut",
+          "name": "SeMPA Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITSONOR",
+          "name": "Sono Restharn",
+          "items": []
+        },
+        {
+          "id": "CareITSOZET",
+          "name": "Sozialdienst",
+          "items": []
+        },
+        {
+          "id": "CareITStimulationsparameter",
+          "name": "Stimulationsparameter",
+          "items": []
+        },
+        {
+          "id": "CareITStimulationstest",
+          "name": "Stimulationstest UPDRS",
+          "items": []
+        },
+        {
+          "id": "CareITFall",
+          "name": "Sturzereignisprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITTENE",
+          "name": "Telefonische Evaluation nach der Entlassung aus der Klinik",
+          "items": []
+        },
+        {
+          "id": "CareITTFZA",
+          "name": "TEST Fragenbogen zur Aufnahme",
+          "items": []
+        },
+        {
+          "id": "CareITTHEREQ",
+          "name": "Therapieanforderung",
+          "items": []
+        },
+        {
+          "id": "CareITTherapyRequirement",
+          "name": "Therapieplanung",
+          "items": []
+        },
+        {
+          "id": "CareITTHSPT",
+          "name": "THS Polaustestung STN-Links",
+          "items": []
+        },
+        {
+          "id": "CareITTHSPTSTNR",
+          "name": "THS Polaustestung STN-Rechts",
+          "items": []
+        },
+        {
+          "id": "CareITTinetti",
+          "name": "Tinetti-Test",
+          "items": []
+        },
+        {
+          "id": "CareITClocktest",
+          "name": "Uhrentest",
+          "items": []
+        },
+        {
+          "id": "CareITDIAGRES",
+          "name": "Untersuchungsbefund",
+          "items": []
+        },
+        {
+          "id": "CareITMDS_UPDRSIII",
+          "name": "UPDRS III",
+          "items": []
+        },
+        {
+          "id": "CareITVOSP",
+          "name": "VOSP Testbatterie für visuelle Objekt- & Raumwahrnehmung",
+          "items": []
+        },
+        {
+          "id": "CareITRCFTW",
+          "name": "Wiedererkennen (RCFT)",
+          "items": []
+        },
+        {
+          "id": "CareITWMSR",
+          "name": "WMS-R",
+          "items": []
+        },
+        {
+          "id": "CareITWound_burn",
+          "name": "Wunden - Brandwunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_bedsore",
+          "name": "Wunden - Dekubitus",
+          "items": []
+        },
+        {
+          "id": "CareITWound_skin_lesions",
+          "name": "Wunden - Hautveränderungen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_pain",
+          "name": "Wunden - Schmerzen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_other",
+          "name": "Wunden - Sonstiges",
+          "items": []
+        },
+        {
+          "id": "CareITWound_wound",
+          "name": "Wunden - Wunde",
+          "items": []
+        }
+      ]
     }
   ]
 }
