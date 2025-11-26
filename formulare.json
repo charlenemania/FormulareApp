@@ -59,18 +59,62 @@
           "id": "CareITARTTHERPD",
           "name": "Kunsttherapie Verlaufsdokumentation",
           "items": []
-        }
-      ]
-    },
-    {
-      "id": "arzt",
-      "name": "Ärzte-Demosystem",
-      "formulare": [
-        {
-          "id": "aufnahme",
-          "name": "Ärztliche Aufnahme",
-          "items": ["Anamnese", "Diagnosen", "Befunde"]
         },
+        {
+          "id": "CareITASHSKA",
+          "name": "Ashworth-Skala nach Koch und Zaech",
+          "items": []
+        },
+        {
+          "id": "CareITASINGE",
+          "name": "Assessment Innere Geriatrie",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaAkut",
+          "name": "Gesamt Assessment Reha",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaIP",
+          "name": "SeMPA Assessment IC",
+          "items": []
+        },
+        {
+          "id": "CareITAUFNNEUROPSYREHA",
+          "name": "Neuropsychologie Aufnahmebefund (Schwerpunkt Rehabilitation)",
+          "items": []
+        },
+        {
+          "id": "CareITAUSL",
+          "name": "Aufnahmebefund Schlaflabor",
+          "items": []
+        },
+        {
+          "id": "CareITBarthelIndexSempa",
+          "name": "Sempa - Barthel-Index",
+          "items": []
+        },
+        {
+          "id": "CareITBBS",
+          "name": "Berg-Balance-Skala",
+          "items": []
+        },
+        {
+          "id": "CareITBDIMI",
+          "name": "Beck-Depressions-Inventar (BDI)",
+          "items": []
+        },
+        {
+          "id": "CareITBEPA",
+          "name": "Beatmungsparameter",
+          "items": []
+        },
+        {
+          "id": "CareITBEPOLYSO",
+          "name": "Befund Polysomnographie",
+          "items": []
+        }
       ]
     },
     {
@@ -88,6 +132,7 @@
   ]
 
 }
+
 
 
 
