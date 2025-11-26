@@ -1,3 +1,26 @@
+#clearSearch {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0 4px;
+  height: 32px;
+  width: 32px;
+  line-height: 1;
+  border-radius: 100%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: none;
+}
+#clearSearch:hover {
+  background: #eaecef;
+  color: #24292f;
+}
+.search-wrapper {
+  position: relative;
+}
 body {
   font-family: system-ui, sans-serif;
   background: #f6f8fa;
@@ -69,4 +92,5 @@ ul.items li {
   font-size: 1rem;
 }
 CSS aktualisiert: Minimalistisches, modernes Design im Stil von GitHub hinzugefügt, alle bunten Farben entfernt.
+
 
