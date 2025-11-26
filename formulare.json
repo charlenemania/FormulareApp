@@ -19,6 +19,21 @@
           "id": "CareIT360Rotation",
           "name": "360° Drehung (Schwerpunkt Parkinson)",
           "items": []
+        },
+        {
+          "id": "CareITAdmin_ISO",
+          "name": "Isolierung",
+          "items": []
+        },
+        {
+          "id": "CareITAHBMRI_II",
+          "name": "Frühreha-Barthel-Index inkl. ASB Kriterien",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisIntensiv",
+          "name": "SeMPA Anamnese IC",
+          "items": []
         }
       ]
     },
@@ -36,6 +51,7 @@
   ]
 
 }
+
 
 
 
