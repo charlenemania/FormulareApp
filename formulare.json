@@ -125,16 +125,11 @@
           "id": "aufnahme",
           "name": "Ärztliche Aufnahme",
           "items": ["Anamnese", "Diagnosen", "Befunde"]
-        },
-        
+        }
       ]
     }
   ]
-
 }
-
-
-
 
 
 
