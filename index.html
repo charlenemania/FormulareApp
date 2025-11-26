@@ -26,7 +26,8 @@ function renderDemosysteme() {
   const app = document.getElementById('app');
   app.innerHTML = '';
   data.demosysteme.forEach(ds => {
-    const div = document.createElement('div');
+    70
+    
     div.className = 'system';
     div.textContent = ds.name;
     div.onclick = () => renderFormulare(ds);
@@ -38,7 +39,7 @@ function renderFormulare(system) {
   const app = document.getElementById('app');
   app.innerHTML = `<h2>${system.name}</h2><button onclick="renderDemosysteme()">← Zurück</button>`;
   system.formulare.forEach(f => {
-    const div = document.createElement('div');
+    
     div.className = 'formular';
     div.textContent = f.name;
     div.onclick = () => renderItems(system, f);
@@ -48,7 +49,7 @@ function renderFormulare(system) {
 
 function renderItems(system, formular) {
   const app = document.getElementById('app');
-  app.innerHTML = `<h2>${formular.name}</h2><button onclick="renderFormulare({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>`;
+  app.innerHTML = `<h2>${formular.name}</h2><button onclick="toggleFormItems(event)">toggleFormItems(event)({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>`;
   const ul = document.createElement('ul');
   ul.className = 'items';
   formular.items.forEach(item => {
@@ -69,13 +70,30 @@ function searchFormular() {
       if (f.id.toLowerCase().includes(term) || f.name.toLowerCase().includes(term) || f.items.some(i => i.toLowerCase().includes(term))) {
         const div = document.createElement('div');
         div.textContent = `${f.name} (System: ${ds.name})`;
+          div.onclick = (event) => toggleFormItems(event);                  const ul = document.createElement('ul');
+                  ul.className = 'items';
+                  ul.style.display = 'none';
+                  f.items.forEach(item => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                ul.appendChild(li);
+                              });
+                  div.appendChild(ul);
         app.appendChild(div);
       }
     });
   });
 }
+
+  function toggleFormItems(event) {
+      const ul = event.target.nextElementSibling;
+      if (ul && ul.tagName === 'UL') {
+            ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+          }
+    }
 </script>
 
 </body>
 
 </html>
+
