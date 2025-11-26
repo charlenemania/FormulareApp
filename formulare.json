@@ -14,6 +14,11 @@
           "id": "CareIT_MNA",
           "name": "Mini Nutritional Assessment",
           "items": []
+        },
+        {
+          "id": "CareIT360Rotation",
+          "name": "360° Drehung (Schwerpunkt Parkinson)",
+          "items": []
         }
       ]
     },
@@ -31,5 +36,6 @@
   ]
 
 }
+
 
 
