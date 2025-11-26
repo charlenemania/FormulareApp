@@ -788,21 +788,6 @@
       ]
     },
     {
-      "id": "arzt",
-      "name": "Ärzte-Demosystem",
-      "formulare": [
-        {
-          "id": "aufnahme",
-          "name": "Ärztliche Aufnahme",
-          "items": [
-            "Anamnese",
-            "Diagnosen",
-            "Befunde"
-          ]
-        }
-      ]
-    },
-    {
       "id": "leverkusen",
       "name": "Leverkusen",
       "url": "leverkusen.careit.one",
