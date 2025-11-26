@@ -1,24 +1,18 @@
 {
-  "Demosysteme": [
+  "demosysteme": [
     {
-      "id": "mi",
-      "name": "M&I",
-      "url": "mi.careit.one"
+      "id": "pflege",
+      "name": "Pflege-Demosystem",
       "formulare": [
         {
-          "id": "CareIT_DEMMI",
-          "name": "de Morton Mobility Index (DEMMI)",
-          "items": []
+          "id": "wochenbett",
+          "name": "Wochenbettvisite",
+          "items": ["Fundusstand", "Blutung", "MBE", "Stillen"]
         },
         {
-          "id": "CareIT_MNA",
-          "name": "Mini Nutritional Assessment",
+          "id": "anamnese",
+          "name": "Anamnese",
           "items": ["Vorerkrankungen", "Medikamente", "Allergien"]
-        },
-        {
-          "id": "CareIT360Rotation",
-          "name": "360° Drehung (Schwerpunkt Parkinson)",
-          "items": []
         }
       ]
     },
@@ -34,5 +28,4 @@
       ]
     }
   ]
-
 }
