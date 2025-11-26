@@ -2431,15 +2431,10 @@
       ]
     },
     {
-      "id": "rbk",
-      "name": "Robert Bosch Krankenhaus (RBK)",
-      "url": "rbk.careit.one",
+      "id": "skh",
+      "name": "Sophienklinik Hannover (SKH)",
+      "url": "skh.careit.one",
       "formulare": [
-        {
-          "id": "CareIT_Breath",
-          "name": "Atemerfassungsskala nach Bienstein",
-          "items": []
-        },
         {
           "id": "CareITBPS",
           "name": "Behavioral Pain Scale (BPS)",
@@ -2471,11 +2466,6 @@
           "items": []
         },
         {
-          "id": "CareITICDSC",
-          "name": "Die Intensive Care Delirium Screening Checklist (ICDSC)",
-          "items": []
-        },
-        {
           "id": "CareIT_EAT",
           "name": "EAT-10 Dysphagie-Screeningbogen",
           "items": []
@@ -2483,11 +2473,6 @@
         {
           "id": "CareITEncounterAdditionalInfo",
           "name": "EncounterAdditionalInfo",
-          "items": []
-        },
-        {
-          "id": "CareITDischargeManagementsempa",
-          "name": "Entlassmanagement",
           "items": []
         },
         {
@@ -2506,11 +2491,6 @@
           "items": []
         },
         {
-          "id": "CareITAdmin_ISO",
-          "name": "Isolierung",
-          "items": []
-        },
-        {
           "id": "CareIT_MNA",
           "name": "Mini Nutritional Assessment",
           "items": []
@@ -2518,21 +2498,6 @@
         {
           "id": "CareITMSA",
           "name": "Modifiziertes Schluckassessment (MSA)",
-          "items": []
-        },
-        {
-          "id": "CareITMRESCREENING",
-          "name": "MRE-Aufnahme-Screening",
-          "items": []
-        },
-        {
-          "id": "CareITMRSASANPLANI",
-          "name": "MRSA Sanierungsversuch I",
-          "items": []
-        },
-        {
-          "id": "CareITMRSASANPLANII",
-          "name": "MRSA Sanierungsversuch II",
           "items": []
         },
         {
@@ -2551,13 +2516,8 @@
           "items": []
         },
         {
-          "id": "CareITNRSSEMPA_Neu",
-          "name": "NRS Neu",
-          "items": []
-        },
-        {
           "id": "CareITNUDESC",
-          "name": "Nu-DeSc (Nursing Delirium Screening Scale)",
+          "name": "NU-DESC (Nursing Delirium Screening Scale)",
           "items": []
         },
         {
@@ -2566,28 +2526,8 @@
           "items": []
         },
         {
-          "id": "CareITPPR20E_NEU",
-          "name": "PPR 2.0 E",
-          "items": []
-        },
-        {
-          "id": "CareITDELPREPRO",
-          "name": "Prozess Delirprävention",
-          "items": []
-        },
-        {
-          "id": "CareIT_RASS",
-          "name": "Richmond Agitation-Sedation Scale (RASS)",
-          "items": []
-        },
-        {
-          "id": "CareITBarthelIndexSempa",
-          "name": "Sempa - Barthel-Index",
-          "items": []
-        },
-        {
-          "id": "CareITExBarthelIndexSempa",
-          "name": "Sempa - Barthel-Index Erweitert",
+          "id": "CareITVerlegungsberichtSempa",
+          "name": "Pflegeüberleitungsprotokoll",
           "items": []
         },
         {
@@ -2606,18 +2546,8 @@
           "items": []
         },
         {
-          "id": "CareITAssessmentSempaIP",
-          "name": "SeMPA Assessment IC",
-          "items": []
-        },
-        {
           "id": "CareITFall",
           "name": "Sturzereignisprotokoll",
-          "items": []
-        },
-        {
-          "id": "CareITVerlegungsberichtSempa",
-          "name": "Überleitungsbogen",
           "items": []
         },
         {
