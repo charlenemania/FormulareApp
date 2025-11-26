@@ -114,6 +114,156 @@
           "id": "CareITBEPOLYSO",
           "name": "Befund Polysomnographie",
           "items": []
+        },
+        {
+          "id": "CareITBEPOT",
+          "name": "Beatmungsentwöhnungspotenzial",
+          "items": []
+        },
+        {
+          "id": "CareITBEPSYCHA3",
+          "name": "Psychologie Befund A3",
+          "items": []
+        },
+        {
+          "id": "CareITBEPSYCHB2",
+          "name": "Psychologie Befund B2",
+          "items": []
+        },
+        {
+          "id": "CareITBSYMP",
+          "name": "Begleitsymptome",
+          "items": []
+        },
+        {
+          "id": "CareITCHECKLISTEFBS",
+          "name": "Aufnahme-Checkliste (Feststellung Beatmungsstatus)",
+          "items": []
+        },
+        {
+          "id": "CareITClocktest",
+          "name": "Uhrentest",
+          "items": []
+        },
+        {
+          "id": "CareITDASS",
+          "name": "DASS-21",
+          "items": []
+        },
+        {
+          "id": "",
+          "name": "",
+          "items": []
+        },
+        {
+          "id": "CareITDASSP",
+          "name": "DASS-P",
+          "items": []
+        },
+        {
+          "id": "CareITDEMTECT",
+          "name": "Dementia Detection Test (DemTect)",
+          "items": []
+        },
+        {
+          "id": "CareITDischargeManagementsempa",
+          "name": "Entlassmanagement",
+          "items": []
+        },
+        {
+          "id": "CareITDISNEUROPSYREHA",
+          "name": "Neuropsychologie Entlassbefund (Schwerpunkt Rehabilitation)",
+          "items": []
+        },
+        {
+          "id": "CareITDOKTHERABEGR",
+          "name": "Dokumentation Therapiebegrenzung",
+          "items": []
+        },
+        {
+          "id": "CareITDSF",
+          "name": "Deutscher Schmerz-Fragebogen",
+          "items": []
+        },
+        {
+          "id": "CareITEINVB",
+          "name": "Einwilligungserklärung zur Verwendung von Bildnissen",
+          "items": []
+        },
+        {
+          "id": "CareITEINVINF",
+          "name": "Einverständniserklärung „interventionelle Schmerztherapie“ / Infiltrationen",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfo",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITEPIP",
+          "name": "Eingriffsprotokoll /Interventionsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITEQ5D",
+          "name": "Gesundheitsfragebogen EQ-5",
+          "items": []
+        },
+        {
+          "id": "CAREITESS",
+          "name": "Fragebogen zur Tagesschläfrigkeit (Epworth Sleepiness Scale)",
+          "items": []
+        },
+        {
+          "id": "CareITETS",
+          "name": "Esslinger Transferskala",
+          "items": []
+        },
+        {
+          "id": "CareITExBarthelIndex",
+          "name": "Erweiterter Barthel Index",
+          "items": []
+        },
+        {
+          "id": "CareITExBarthelIndexSempa",
+          "name": "Erweiterter Barthel Index Sempa",
+          "items": []
+        },
+        {
+          "id": "CareITFAC",
+          "name": "Functional Ambulation Categories",
+          "items": []
+        },
+        {
+          "id": "CareITFall",
+          "name": "Sturzereignisprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITFallRiskAssessmentNursIT",
+          "name": "Sturzrisikoassessment",
+          "items": []
+        },
+        {
+          "id": "CareITFBAUFNAHME",
+          "name": "Fragebogen zur Aufnahme",
+          "items": []
+        },
+        {
+          "id": "CAREITFBRLS",
+          "name": "Fragebogen Restless-Legs-Syndrom",
+          "items": []
+        },
+        {
+          "id": "CareITFBSL",
+          "name": "Fragebogen Schlaflabor",
+          "items": []
+        },
+        {
+          "id": "CareITFDPLT",
+          "name": "Funktionelle Demonstration, Provokation und Linderungstests",
+          "items": []
         }
       ]
     },
@@ -130,6 +280,7 @@
     }
   ]
 }
+
 
 
 
