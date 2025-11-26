@@ -34,6 +34,31 @@
           "id": "CareITAnamnesisIntensiv",
           "name": "SeMPA Anamnese IC",
           "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkut",
+          "name": "Gesamt Anamnese Reha",
+          "items": []
+        },
+        {
+          "id": "CareITANINMEDHER",
+          "name": "Anamnese Medizin",
+          "items": []
+        },
+        {
+          "id": "CareITAPHV",
+          "name": "Aufnahmeprotokoll Sozialdienst",
+          "items": []
+        },
+        {
+          "id": "CareITAPHYUM",
+          "name": "Aufnahme Physiotherapie und Massage",
+          "items": []
+        },
+        {
+          "id": "CareITARTTHERPD",
+          "name": "Kunsttherapie Verlaufsdokumentation",
+          "items": []
         }
       ]
     },
@@ -45,12 +70,25 @@
           "id": "aufnahme",
           "name": "Ärztliche Aufnahme",
           "items": ["Anamnese", "Diagnosen", "Befunde"]
-        }
+        },
+      ]
+    },
+    {
+      "id": "arzt",
+      "name": "Ärzte-Demosystem",
+      "formulare": [
+        {
+          "id": "aufnahme",
+          "name": "Ärztliche Aufnahme",
+          "items": ["Anamnese", "Diagnosen", "Befunde"]
+        },
+        
       ]
     }
   ]
 
 }
+
 
 
 
