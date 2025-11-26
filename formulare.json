@@ -3192,6 +3192,418 @@
           "items": []
         }
       ]
+    },
+    {
+      "id": "ebkhalle",
+      "name": "St. Elisabeth & St. Barbara Krankenhaus Halle/Saale (EBKHalle)",
+      "url": "ebkhalle.careit.one",
+      "formulare": [
+        {
+          "id": "CareITAnamnesis",
+          "name": "Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITRegistration",
+          "name": "Anmeldung zur Aufnahme",
+          "items": []
+        },
+        {
+          "id": "CareITAssessment",
+          "name": "Assessment",
+          "items": []
+        },
+        {
+          "id": "CareIT_Breath",
+          "name": "Atemerfassungsskala nach Bienstein",
+          "items": []
+        },
+        {
+          "id": "CareIT_FEM",
+          "name": "Ärztliche Anordnung 'Freiheitseinschränkender Maßnahmen'",
+          "items": []
+        },
+        {
+          "id": "CareITMedicalOrderDayAdmission",
+          "name": "Ärztliche Anordnung für den Aufnahmetag",
+          "items": []
+        },
+        {
+          "id": "CareITBarthelIndex",
+          "name": "Barthel Index",
+          "items": []
+        },
+        {
+          "id": "CareITBarthelIndexSempa",
+          "name": "BarthelIndex Sempa",
+          "items": []
+        },
+        {
+          "id": "CareITBPS",
+          "name": "Behavioral Pain Scale (BPS)",
+          "items": []
+        },
+        {
+          "id": "CareITBPSNI",
+          "name": "Behavioral Pain Scale für Nicht-Intubierte (BPS-NI)",
+          "items": []
+        },
+        {
+          "id": "CareITSpecialeventIincidentreport",
+          "name": "Besonderes Ereignis / Vorfallsbericht",
+          "items": []
+        },
+        {
+          "id": "CareITBettplatzcheck",
+          "name": "Bettplatzcheck",
+          "items": []
+        },
+        {
+          "id": "CareIT_Biographics",
+          "name": "Biographiebogen",
+          "items": []
+        },
+        {
+          "id": "CareITFIM",
+          "name": "CareITFIM",
+          "items": []
+        },
+        {
+          "id": "CareITSturzrisikoCTK",
+          "name": "Checkliste Sturzrisiko CTK",
+          "items": []
+        },
+        {
+          "id": "CareITCAM_Bogen",
+          "name": "Confusion Assessment Method (CAM)",
+          "items": []
+        },
+        {
+          "id": "CareIT_CAMICU",
+          "name": "Confusion Assessment Method für Intensivstation (CAM-ICU)",
+          "items": []
+        },
+        {
+          "id": "CareIT_DEMMI",
+          "name": "de Morton Mobility Index (DEMMI)",
+          "items": []
+        },
+        {
+          "id": "CareITBVC",
+          "name": "Die Brøset-Violence-Checkliste (BVC)",
+          "items": []
+        },
+        {
+          "id": "CareITICDSC",
+          "name": "Die Intensive Care Delirium Screening Checklist (ICDSC)",
+          "items": []
+        },
+        {
+          "id": "CareIT_EAT",
+          "name": "Dysphagie-Screeningbogen",
+          "items": []
+        },
+        {
+          "id": "CareITEPDS",
+          "name": "Edinburgh Postnatale Depression Skala (EPDS)",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfoIC",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfoKids",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfo",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITDischargeManagement",
+          "name": "Entlassmanagement",
+          "items": []
+        },
+        {
+          "id": "CareITDischargeManagementsempa",
+          "name": "Entlassmanagement",
+          "items": []
+        },
+        {
+          "id": "CareITWBS",
+          "name": "Erhebung des Wochenbettstatus (Puerperium)",
+          "items": []
+        },
+        {
+          "id": "CareITExBarthelIndex",
+          "name": "Erweiterter Barthel Index",
+          "items": []
+        },
+        {
+          "id": "CareITExBarthelIndexSempa",
+          "name": "Erweiterter Barthel Index Sempa",
+          "items": []
+        },
+        {
+          "id": "CareIT_KIDS_Finnegan",
+          "name": "Finnegan Score",
+          "items": []
+        },
+        {
+          "id": "CareITGCSFrankfurt",
+          "name": "FrankfurterGCS (erweiterte und adaptierte Form)",
+          "items": []
+        },
+        {
+          "id": "CareITGermanAppropriateEvaluationProtocol",
+          "name": "G-AEP-Kriterien",
+          "items": []
+        },
+        {
+          "id": "CareITGCS",
+          "name": "GCS",
+          "items": []
+        },
+        {
+          "id": "CareITGCSRitz",
+          "name": "GCS modifiziert nach Ritz et al.",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaGHMother",
+          "name": "Geburtshilfe Anamnese Mutter",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaGHMother",
+          "name": "Geburtshilfe Assessment Mutter",
+          "items": []
+        },
+        {
+          "id": "CareITIndirektePflege",
+          "name": "Indirekte Pflege",
+          "items": []
+        },
+        {
+          "id": "CareITAdmin_ISO",
+          "name": "Isolierung",
+          "items": []
+        },
+        {
+          "id": "CareITAdmin_ISO_NEW",
+          "name": "Isolierung NEU",
+          "items": []
+        },
+        {
+          "id": "CareIT_KIDS_KUSS",
+          "name": "KUSS-Skala",
+          "items": []
+        },
+        {
+          "id": "CareITMedications_Therapies_HC",
+          "name": "Medikamente/ Therapien (Homecare)",
+          "items": []
+        },
+        {
+          "id": "CareIT_MNA",
+          "name": "Mini Nutritional Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITMSA",
+          "name": "Modifiziertes Schluckassessment (MSA)",
+          "items": []
+        },
+        {
+          "id": "CareIT_NBA",
+          "name": "NBA",
+          "items": []
+        },
+        {
+          "id": "CareITNGASR",
+          "name": "NGASR-Skala",
+          "items": []
+        },
+        {
+          "id": "CareITNIHStrokeScaleIP",
+          "name": "NIHSS",
+          "items": []
+        },
+        {
+          "id": "CareITEmergencyAdmissionSheet",
+          "name": "Notaufnahmebogen",
+          "items": []
+        },
+        {
+          "id": "CareITNRS_SEMPA",
+          "name": "NRS",
+          "items": []
+        },
+        {
+          "id": "CareITNUDESC",
+          "name": "NU-DESC (Nursing Delirium Screening Scale)",
+          "items": []
+        },
+        {
+          "id": "CareITDiagnosis",
+          "name": "Pflegediagnosen",
+          "items": []
+        },
+        {
+          "id": "CareITVerlegungsberichtSempa",
+          "name": "Pflegeüberleitungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITVerlegungsbericht",
+          "name": "Pflegeüberleitungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITPOPCNEA",
+          "name": "Postoperative Checkliste nach Eingriffen an der Aorta",
+          "items": []
+        },
+        {
+          "id": "CareIT_RASS",
+          "name": "Richmond Agitation-Sedation Scale (RASS)",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkut",
+          "name": "SeMPA Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisIntensiv",
+          "name": "SeMPA Anamnese IC",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaKIDS",
+          "name": "Sempa Anamnese Kind",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaNeo",
+          "name": "Sempa Anamnese Neonatologie",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaNeo",
+          "name": "Sempa Anamnese Neonatologie",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaPsych",
+          "name": "SeMPA Anamnese Psych",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaAkut",
+          "name": "SeMPA Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaIP",
+          "name": "SeMPA Assessment IC",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaKIDS",
+          "name": "Sempa Assessment Kind",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaPsych",
+          "name": "SeMPA Assessment Psych",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaNeo",
+          "name": "Sempa Asssessment Neonatologie",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaNeo",
+          "name": "Sempa Asssessment Neonatologie",
+          "items": []
+        },
+        {
+          "id": "CareITSilverman",
+          "name": "Silverman-Score",
+          "items": []
+        },
+        {
+          "id": "CareITFall",
+          "name": "Sturzereignisprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITSubdelegation",
+          "name": "Subdelegation VHNOE",
+          "items": []
+        },
+        {
+          "id": "CareITWertsachenbogenCTK",
+          "name": "Wertsachenbogen CTK",
+          "items": []
+        },
+        {
+          "id": "CareITWertsachenbogenIC",
+          "name": "Wertsachenbogen IC",
+          "items": []
+        },
+        {
+          "id": "CareITWound_burn",
+          "name": "Wunden - Brandwunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_bedsore",
+          "name": "Wunden - Dekubitus",
+          "items": []
+        },
+        {
+          "id": "CareITWound_drainage",
+          "name": "Wunden - Drainagen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_skin_lesions",
+          "name": "Wunden - Hautveränderungen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_pain",
+          "name": "Wunden - Schmerzen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_other",
+          "name": "Wunden - Sonstiges",
+          "items": []
+        },
+        {
+          "id": "CareITWound_stoma",
+          "name": "Wunden - Stomablatt",
+          "items": []
+        },
+        {
+          "id": "CareITWound_wound",
+          "name": "Wunden - Wunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_supply",
+          "name": "Wunden - Zuleitung",
+          "items": []
+        }
+      ]
     }
   ]
 }
