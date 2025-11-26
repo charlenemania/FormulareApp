@@ -1,8 +1,9 @@
 {
   "demosysteme": [
     {
-      "id": "pflege",
-      "name": "Pflege-Demosystem",
+      "id": "mi",
+      "name": "M&I",
+	  "url": "mi.careit.one"
       "formulare": [
         {
           "id": "wochenbett",
