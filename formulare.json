@@ -2706,6 +2706,330 @@
           "items": []
         }
       ]
+    },
+    {
+      "id": "skh",
+      "name": "Sophienklinik Hannover (SKH)",
+      "url": "skh.careit.one",
+      "formulare": [
+        {
+          "id": "CareITBPS",
+          "name": "Behavioral Pain Scale (BPS)",
+          "items": []
+        },
+        {
+          "id": "CareITBPSNI",
+          "name": "Behavioral Pain Scale für Nicht-Intubierte (BPS-NI)",
+          "items": []
+        },
+        {
+          "id": "CareITBESD",
+          "name": "BESD",
+          "items": []
+        },
+        {
+          "id": "CareITBettplatzcheck",
+          "name": "Bettplatzcheck IP",
+          "items": []
+        },
+        {
+          "id": "CareIT_DEMMI",
+          "name": "de Morton Mobility Index (DEMMI)",
+          "items": []
+        },
+        {
+          "id": "CareITDOS",
+          "name": "Delirium Observation Scale (DOS)",
+          "items": []
+        },
+        {
+          "id": "CareIT_EAT",
+          "name": "EAT-10 Dysphagie-Screeningbogen",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfo",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITFruehrehaBarthelIndex",
+          "name": "Frühreha - BarthelIndex",
+          "items": []
+        },
+        {
+          "id": "CareITGCS",
+          "name": "GCS",
+          "items": []
+        },
+        {
+          "id": "CareITIndirektePflege",
+          "name": "Indirekte Pflege",
+          "items": []
+        },
+        {
+          "id": "CareIT_MNA",
+          "name": "Mini Nutritional Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITMSA",
+          "name": "Modifiziertes Schluckassessment (MSA)",
+          "items": []
+        },
+        {
+          "id": "CareITNBA",
+          "name": "NBA",
+          "items": []
+        },
+        {
+          "id": "CareITNIHStrokeScaleIP",
+          "name": "NIHSS",
+          "items": []
+        },
+        {
+          "id": "CareITNRS_SEMPA",
+          "name": "NRS",
+          "items": []
+        },
+        {
+          "id": "CareITNUDESC",
+          "name": "NU-DESC (Nursing Delirium Screening Scale)",
+          "items": []
+        },
+        {
+          "id": "CareITDiagnosis",
+          "name": "Pflegediagnosen",
+          "items": []
+        },
+        {
+          "id": "CareITVerlegungsberichtSempa",
+          "name": "Pflegeüberleitungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkut",
+          "name": "SeMPA Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisIntensiv",
+          "name": "SeMPA Anamnese IC",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaAkut",
+          "name": "SeMPA Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITFall",
+          "name": "Sturzereignisprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITWertsachenbogenIC",
+          "name": "Wertsachenbogen IC",
+          "items": []
+        },
+        {
+          "id": "CareITWound_burn",
+          "name": "Wunden - Brandwunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_bedsore",
+          "name": "Wunden - Dekubitus",
+          "items": []
+        },
+        {
+          "id": "CareITWound_skin_lesions",
+          "name": "Wunden - Hautveränderungen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_other",
+          "name": "Wunden - Sonstiges",
+          "items": []
+        },
+        {
+          "id": "CareITWound_stoma",
+          "name": "Wunden - Stomablatt",
+          "items": []
+        },
+        {
+          "id": "CareITWound_wound",
+          "name": "Wunden - Wunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_supply",
+          "name": "Wunden - Zuleitung",
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "rbk",
+      "name": "Robert Bosch Krankenhaus (RBK)",
+      "url": "rbk.careit.one",
+      "formulare": [
+        {
+          "id": "CareITBPS",
+          "name": "Behavioral Pain Scale (BPS)",
+          "items": []
+        },
+        {
+          "id": "CareITBPSNI",
+          "name": "Behavioral Pain Scale für Nicht-Intubierte (BPS-NI)",
+          "items": []
+        },
+        {
+          "id": "CareITBESD",
+          "name": "BESD",
+          "items": []
+        },
+        {
+          "id": "CareITBettplatzcheck",
+          "name": "Bettplatzcheck IP",
+          "items": []
+        },
+        {
+          "id": "CareIT_DEMMI",
+          "name": "de Morton Mobility Index (DEMMI)",
+          "items": []
+        },
+        {
+          "id": "CareITDOS",
+          "name": "Delirium Observation Scale (DOS)",
+          "items": []
+        },
+        {
+          "id": "CareIT_EAT",
+          "name": "EAT-10 Dysphagie-Screeningbogen",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfo",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITFruehrehaBarthelIndex",
+          "name": "Frühreha - BarthelIndex",
+          "items": []
+        },
+        {
+          "id": "CareITGCS",
+          "name": "GCS",
+          "items": []
+        },
+        {
+          "id": "CareITIndirektePflege",
+          "name": "Indirekte Pflege",
+          "items": []
+        },
+        {
+          "id": "CareIT_MNA",
+          "name": "Mini Nutritional Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITMSA",
+          "name": "Modifiziertes Schluckassessment (MSA)",
+          "items": []
+        },
+        {
+          "id": "CareITNBA",
+          "name": "NBA",
+          "items": []
+        },
+        {
+          "id": "CareITNIHStrokeScaleIP",
+          "name": "NIHSS",
+          "items": []
+        },
+        {
+          "id": "CareITNRS_SEMPA",
+          "name": "NRS",
+          "items": []
+        },
+        {
+          "id": "CareITNUDESC",
+          "name": "NU-DESC (Nursing Delirium Screening Scale)",
+          "items": []
+        },
+        {
+          "id": "CareITDiagnosis",
+          "name": "Pflegediagnosen",
+          "items": []
+        },
+        {
+          "id": "CareITVerlegungsberichtSempa",
+          "name": "Pflegeüberleitungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkut",
+          "name": "SeMPA Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisIntensiv",
+          "name": "SeMPA Anamnese IC",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaAkut",
+          "name": "SeMPA Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITFall",
+          "name": "Sturzereignisprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITWertsachenbogenIC",
+          "name": "Wertsachenbogen IC",
+          "items": []
+        },
+        {
+          "id": "CareITWound_burn",
+          "name": "Wunden - Brandwunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_bedsore",
+          "name": "Wunden - Dekubitus",
+          "items": []
+        },
+        {
+          "id": "CareITWound_skin_lesions",
+          "name": "Wunden - Hautveränderungen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_other",
+          "name": "Wunden - Sonstiges",
+          "items": []
+        },
+        {
+          "id": "CareITWound_stoma",
+          "name": "Wunden - Stomablatt",
+          "items": []
+        },
+        {
+          "id": "CareITWound_wound",
+          "name": "Wunden - Wunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_supply",
+          "name": "Wunden - Zuleitung",
+          "items": []
+        }
+      ]
     }
   ]
 }
