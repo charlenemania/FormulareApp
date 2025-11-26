@@ -3604,6 +3604,578 @@
           "items": []
         }
       ]
+    },
+    {
+      "id": "wjb",
+      "name": "Waldklinik Jesteburg",
+      "url": "wjb.careit.one",
+      "formulare": [
+        {
+          "id": "CareITGT4M",
+          "name": "4 Meter Gehtest",
+          "items": []
+        },
+        {
+          "id": "CareITAPSV",
+          "name": "Akutschmerzdienst Visite",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesis",
+          "name": "Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITARS",
+          "name": "Antikoagulation - Risikoscores",
+          "items": []
+        },
+        {
+          "id": "CareITAssessment",
+          "name": "Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITRESTHERRECFIN",
+          "name": "Atmungstherapie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITRESTHERDISFIN",
+          "name": "Atmungstherapie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITRESTHERPD",
+          "name": "Atmungstherapie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareIT_FEM",
+          "name": "Ärztliche Anordnung 'Freiheitseinschränkender Maßnahmen'",
+          "items": []
+        },
+        {
+          "id": "CareITMEDANA",
+          "name": "Ärztlicher Aufnahmebericht",
+          "items": []
+        },
+        {
+          "id": "CareITBarthelIndex",
+          "name": "Barthel Index",
+          "items": []
+        },
+        {
+          "id": "CareITBEPA",
+          "name": "Beatmungsparameter",
+          "items": []
+        },
+        {
+          "id": "CareITBSYMP",
+          "name": "Begleitsymptome",
+          "items": []
+        },
+        {
+          "id": "CareITBPS",
+          "name": "Behavioral Pain Scale (BPS)",
+          "items": []
+        },
+        {
+          "id": "CareITBPSNI",
+          "name": "Behavioral Pain Scale für Nicht-Intubierte (BPS-NI)",
+          "items": []
+        },
+        {
+          "id": "CareITBBS",
+          "name": "Berg-Balance-Skala",
+          "items": []
+        },
+        {
+          "id": "CareITBSNNEO",
+          "name": "Berner Schmerzscore für Neugeborene (BSN)",
+          "items": []
+        },
+        {
+          "id": "CareITBESD",
+          "name": "BESD",
+          "items": []
+        },
+        {
+          "id": "CareITCE",
+          "name": "Checkliste Entlassung",
+          "items": []
+        },
+        {
+          "id": "CareITCOPU",
+          "name": "Checkliste OP-Unterlagen",
+          "items": []
+        },
+        {
+          "id": "CareITCSO",
+          "name": "Checkliste Sichere Operation",
+          "items": []
+        },
+        {
+          "id": "CareITCMTEST",
+          "name": "CM TEST",
+          "items": []
+        },
+        {
+          "id": "CareITNCCN",
+          "name": "Distress Thermometer (NCCN)",
+          "items": []
+        },
+        {
+          "id": "CareITDOKSOZ",
+          "name": "Dokumentation Sozialdienst",
+          "items": []
+        },
+        {
+          "id": "CareITEncounterAdditionalInfo",
+          "name": "EncounterAdditionalInfo",
+          "items": []
+        },
+        {
+          "id": "CareITDischargeManagementsempa",
+          "name": "Entlassmanagement",
+          "items": []
+        },
+        {
+          "id": "CareITMMSCR",
+          "name": "Erfassung der Indikatorfaktoren MRSA",
+          "items": []
+        },
+        {
+          "id": "CareITOCCTHRRECFIN",
+          "name": "Ergotherapie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITOCCTHRDISFIN",
+          "name": "Ergotherapie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITOCCTHERPD",
+          "name": "Ergotherapie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITFINN",
+          "name": "Finnegan Score",
+          "items": []
+        },
+        {
+          "id": "CareIT_KIDS_Finnegan",
+          "name": "Finnegan Score",
+          "items": []
+        },
+        {
+          "id": "CareITGCSFrankfurt",
+          "name": "Frankfurter GCS (erweiterte und adaptierte Form)",
+          "items": []
+        },
+        {
+          "id": "CareITGEBH",
+          "name": "Geburtshilfe",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaGHMother",
+          "name": "Geburtshilfe Anamnese Mutter",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaGHMother",
+          "name": "Geburtshilfe Assessment Mutter",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkutx",
+          "name": "Gesamt Anamnese Reha",
+          "items": []
+        },
+        {
+          "id": "CareITHKMESS",
+          "name": "Handkraftmessung",
+          "items": []
+        },
+        {
+          "id": "CareITPALBASBOG",
+          "name": "HOPE Basisbogen",
+          "items": []
+        },
+        {
+          "id": "CareITHORNHEIDER",
+          "name": "Hornheider Screening",
+          "items": []
+        },
+        {
+          "id": "CareITINDREHABTARGET",
+          "name": "Individuelle Reha-Ziele",
+          "items": []
+        },
+        {
+          "id": "CareITINDTP",
+          "name": "Individueller Therapieplan (Woche 1-2)",
+          "items": []
+        },
+        {
+          "id": "CareITINDTP34",
+          "name": "Individueller Therapieplan (Woche 3-4)",
+          "items": []
+        },
+        {
+          "id": "CareITINDTP56",
+          "name": "Individueller Therapieplan (Woche 5-6)",
+          "items": []
+        },
+        {
+          "id": "CareITAdmin_ISO",
+          "name": "Isolierung",
+          "items": []
+        },
+        {
+          "id": "CareITKB",
+          "name": "Katheterbericht",
+          "items": []
+        },
+        {
+          "id": "CareITKS",
+          "name": "Konsilschein",
+          "items": []
+        },
+        {
+          "id": "CareITKU",
+          "name": "Körperliche Untersuchung",
+          "items": []
+        },
+        {
+          "id": "CareITKHISTORY",
+          "name": "Krankengeschichte",
+          "items": []
+        },
+        {
+          "id": "CareITKHH",
+          "name": "Krankenhaushygiene",
+          "items": []
+        },
+        {
+          "id": "CareIT_KIDS_KUSS",
+          "name": "KUSS-Skala",
+          "items": []
+        },
+        {
+          "id": "CareITSPTHERRECFIN",
+          "name": "Logopädie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITSPTHERDISFIN",
+          "name": "Logopädie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITSPTHERPD",
+          "name": "Logopädie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHERNRECFIN",
+          "name": "Massage Aufnahmebefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHEROAGIRECFIN",
+          "name": "Massage Aufnahmebefund (Schwerpunkt Orthopädie, Akut, Geriatrie, Innere )",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHERNDISFIN",
+          "name": "Massage Entlassbefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHEROAGIDISFIN",
+          "name": "Massage Entlassbefund (Schwerpunkt Orthopädie, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHERNPD",
+          "name": "Massage Verlaufsdokumentation (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHEROAGIPD",
+          "name": "Massage Verlaufsdokumentation (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITMONSHE",
+          "name": "Medizinische Klinik 1, Überwachungsbogen",
+          "items": []
+        },
+        {
+          "id": "CareITMMSTP",
+          "name": "MMST",
+          "items": []
+        },
+        {
+          "id": "CareITMPTB",
+          "name": "Multiprofessionelle Teambesprechung",
+          "items": []
+        },
+        {
+          "id": "CareITNEURORECFIN",
+          "name": "Neuropsychologie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITNEURODISFIN",
+          "name": "Neuropsychologie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITNEUROPSYPD",
+          "name": "Neuropsychologie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITNIHSSIMC",
+          "name": "NIHSS",
+          "items": []
+        },
+        {
+          "id": "CareITNIHStrokeScaleIP",
+          "name": "NIHSS",
+          "items": []
+        },
+        {
+          "id": "CareItNIVPB",
+          "name": "NIV-Protokoll Beatmung",
+          "items": []
+        },
+        {
+          "id": "CareITOCTS",
+          "name": "Oraler Glucosetoleranztest für Schwangere",
+          "items": []
+        },
+        {
+          "id": "CareITBCN",
+          "name": "Pflegedokumentation BCN",
+          "items": []
+        },
+        {
+          "id": "CareITPDE",
+          "name": "Pflegedokumentation Endoskopie",
+          "items": []
+        },
+        {
+          "id": "CareITPHYTHERNRECFIN",
+          "name": "Physiotherapie Aufnahmebefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYOAGIRECFIN",
+          "name": "Physiotherapie Aufnahmebefund (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYTHERNDISFIN",
+          "name": "Physiotherapie Entlassbefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYOAGIDISFIN",
+          "name": "Physiotherapie Entlassbefund (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYNPD",
+          "name": "Physiotherapie Verlaufsdokumentation (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYOAGIPD",
+          "name": "Physiotherapie Verlaufsdokumentation (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20E_NEU",
+          "name": "PPR 2.0 E",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20F",
+          "name": "PPR 2.0 F",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20J",
+          "name": "PPR 2.0 J",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20K",
+          "name": "PPR 2.0 K",
+          "items": []
+        },
+        {
+          "id": "CareITPK",
+          "name": "Pupillenkontrolle",
+          "items": []
+        },
+        {
+          "id": "CareITAPAIN",
+          "name": "Schmerzanamnese",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkut",
+          "name": "SeMPA Anamnese",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisIntensiv",
+          "name": "SeMPA Anamnese IC",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaKIDS",
+          "name": "Sempa Anamnese Kind",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaNeo",
+          "name": "Sempa Anamnese Neonatologie",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaAkut",
+          "name": "SeMPA Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaIP",
+          "name": "SeMPA Assessment IC",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaKIDS",
+          "name": "Sempa Assessment Kind",
+          "items": []
+        },
+        {
+          "id": "CareITAssessmentSempaNeo",
+          "name": "Sempa Asssessment Neonatologie",
+          "items": []
+        },
+        {
+          "id": "CareITSOSERRECFIN",
+          "name": "Sozialdienst Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITSOSERDISFIN",
+          "name": "Sozialdienst Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITSOSERPD",
+          "name": "Sozialdienst Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITFall",
+          "name": "Sturzereignisprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITTEAMBP",
+          "name": "Teambesprechungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITTestRM",
+          "name": "Test",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkutJKNS",
+          "name": "Test Anamnese JKNS",
+          "items": []
+        },
+        {
+          "id": "CareITAnamnesisSempaAkutJKNSMS",
+          "name": "Test MS",
+          "items": []
+        },
+        {
+          "id": "CareITCL",
+          "name": "TESTCL",
+          "items": []
+        },
+        {
+          "id": "CareITTHOMP",
+          "name": "Thompson-Score",
+          "items": []
+        },
+        {
+          "id": "CareITTUGTEST",
+          "name": "Timed Up and Go Test",
+          "items": []
+        },
+        {
+          "id": "CareITTinetti",
+          "name": "Tinetti-Test",
+          "items": []
+        },
+        {
+          "id": "CareITTCT",
+          "name": "Trunk Control Test",
+          "items": []
+        },
+        {
+          "id": "CareITClocktest",
+          "name": "Uhrentest",
+          "items": []
+        },
+        {
+          "id": "CareITUT",
+          "name": "Urin Teststreifen",
+          "items": []
+        },
+        {
+          "id": "CareITVERTEAMNEURO",
+          "name": "Verlaufsdokumentation / Teamsitzung (Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITWound_burn",
+          "name": "Wunden - Brandwunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_bedsore",
+          "name": "Wunden - Dekubitus",
+          "items": []
+        },
+        {
+          "id": "CareITWound_stoma",
+          "name": "Wunden - Stomablatt",
+          "items": []
+        },
+        {
+          "id": "CareITWound_wound",
+          "name": "Wunden - Wunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_supply",
+          "name": "Wunden - Zuleitung",
+          "items": []
+        }
+      ]
     }
   ]
 }
