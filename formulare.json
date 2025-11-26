@@ -264,6 +264,526 @@
           "id": "CareITFDPLT",
           "name": "Funktionelle Demonstration, Provokation und Linderungstests",
           "items": []
+        },
+        {
+          "id": "CareITFEM",
+          "name": "Antrag Amtsgericht",
+          "items": []
+        },
+        {
+          "id": "CareITFEMP",
+          "name": "Freiheitsentziehende Maßnahmen (Pflege)",
+          "items": []
+        },
+        {
+          "id": "CareITFFBHR",
+          "name": "Funktionsfragebogen Hannover-Rücken (FFbH-R)",
+          "items": []
+        },
+        {
+          "id": "CareITFIP",
+          "name": "Fixierungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITFNTEST",
+          "name": "Assessments Ataxie",
+          "items": []
+        },
+        {
+          "id": "CareITFRMOPA",
+          "name": "Fragebogen Morbus Parkinson",
+          "items": []
+        },
+        {
+          "id": "CareITFRREAS",
+          "name": "Frühreha Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITGCS",
+          "name": "Glasgow Coma Scale (GCS)",
+          "items": []
+        },
+        {
+          "id": "CareITGDS",
+          "name": "Geriatrische Depressionsskala (GDS)",
+          "items": []
+        },
+        {
+          "id": "CareITGERASS",
+          "name": "Geriatrisches Assessment",
+          "items": []
+        },
+        {
+          "id": "CareITGT4M",
+          "name": "4 Meter Gehtest",
+          "items": []
+        },
+        {
+          "id": "CareITHKMESS",
+          "name": "Handkraftmessung",
+          "items": []
+        },
+        {
+          "id": "CareITIADL",
+          "name": "IATL",
+          "items": []
+        },
+        {
+          "id": "CareITIFFR",
+          "name": "Indikationen für fachübergreifende Frührehabilitation (OPS 8-559)",
+          "items": []
+        },
+        {
+          "id": "CareITILG",
+          "name": "Eingriffsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITINDREHABTARGET",
+          "name": "Individuelle Reha-Ziele",
+          "items": []
+        },
+        {
+          "id": "CareITINDREHANEU",
+          "name": "Individuelle Reha-Ziele für Neurologie, Orthopädie und Innere",
+          "items": []
+        },
+        {
+          "id": "CareITINSPECTION",
+          "name": "Inspektion",
+          "items": []
+        },
+        {
+          "id": "CareITISI",
+          "name": "Insomnia Severity Index (ISI) Nach [Dieck et al. 2018]",
+          "items": []
+        },
+        {
+          "id": "CareITKRS",
+          "name": "Koma Remissions Skala (KRS)",
+          "items": []
+        },
+        {
+          "id": "CareITKWFEM",
+          "name": "FEM auf Kundenwunsch",
+          "items": []
+        },
+        {
+          "id": "CareITMARCUMAR",
+          "name": "Marcumar Pass",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHERNDISFIN",
+          "name": "Massage Entlassbefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHERNPD",
+          "name": "Massage Verlaufsdokumentation (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHERNRECFIN",
+          "name": "Massage Aufnahmebefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHEROAGIDISFIN",
+          "name": "Massage Entlassbefund (Schwerpunkt Orthopädie, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHEROAGIPD",
+          "name": "Massage Verlaufsdokumentation (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITMASSTHEROAGIRECFIN",
+          "name": "Massage Aufnahmebefund (Schwerpunkt Orthopädie, Akut, Geriatrie, Innere )",
+          "items": []
+        },
+        {
+          "id": "CareITMEDADMREPORT",
+          "name": "Ärztlicher Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITMMSTMI",
+          "name": "Mini-Mental-Status-Test",
+          "items": []
+        },
+        {
+          "id": "CareITMOCA",
+          "name": "MOCA",
+          "items": []
+        },
+        {
+          "id": "CareITMOU",
+          "name": "MDS_UPDRS Teil 3",
+          "items": []
+        },
+        {
+          "id": "CareITMOV",
+          "name": "Orientierungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITNEBO",
+          "name": "Neglectbogen",
+          "items": []
+        },
+        {
+          "id": "CareITNEURODISFIN",
+          "name": "Neuropsychologie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITNEUROPSYPD",
+          "name": "Neuropsychologie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITNEUROPSYSLEEP",
+          "name": "Neuropsychologische Testung Schlaflabor",
+          "items": []
+        },
+        {
+          "id": "CareITNEURORECFIN",
+          "name": "Neuropsychologie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITNHPT",
+          "name": "Nine Hole Peg Test",
+          "items": []
+        },
+        {
+          "id": "CareITOCCTHERPDNEU",
+          "name": "Ergotherapie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITOCCTHRDISFIN",
+          "name": "Ergotherapie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITOCCTHRRECFIN",
+          "name": "Ergotherapie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITOPTZSM",
+          "name": "Optimierung Zungenschrittmacher",
+          "items": []
+        },
+        {
+          "id": "CareITPAINTB",
+          "name": "Schmerztagebuch",
+          "items": []
+        },
+        {
+          "id": "CareITParkinsonsMobilityProtocol",
+          "name": "Parkinson Beweglichkeitsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITPHYNPD",
+          "name": "Physiotherapie Verlaufsdokumentation (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYOAGIDISFIN",
+          "name": "Physiotherapie Entlassbefund (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYOAGIPD",
+          "name": "Physiotherapie Verlaufsdokumentation (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYOAGIRECFIN",
+          "name": "Physiotherapie Aufnahmebefund (Schwerpunkt Ortho, Akut, Geriatrie, Innere)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYTHERNDISFIN",
+          "name": "Physiotherapie Entlassbefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITPHYTHERNRECFIN",
+          "name": "Physiotherapie Aufnahmebefund (Schwerpunkt Neurologie)",
+          "items": []
+        },
+        {
+          "id": "CareITPOLYSO",
+          "name": "Polysomnographie",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20E_NEU",
+          "name": "PPR 2.0 E",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20F",
+          "name": "PPR 2.0 F",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20J",
+          "name": "PPR 2.0 J",
+          "items": []
+        },
+        {
+          "id": "CareITPPR20K",
+          "name": "PPR 2.0 K",
+          "items": []
+        },
+        {
+          "id": "CareITPSYCHPD",
+          "name": "Psychologie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CAREITQDASH",
+          "name": "Quick-DASH",
+          "items": []
+        },
+        {
+          "id": "CareITREMAIDS",
+          "name": "Heil- und Hilfsmittel",
+          "items": []
+        },
+        {
+          "id": "CareITRESTHERDISFIN",
+          "name": "Atmungstherapie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITRESTHERPD",
+          "name": "Atmungstherapie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITRESTHERRECFIN",
+          "name": "Atmungstherapie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITSCIM",
+          "name": "Spinal Cord Independence Measure (SCIM)",
+          "items": []
+        },
+        {
+          "id": "CareITSECHR",
+          "name": "Stadieneinteilung der Chronifizierung",
+          "items": []
+        },
+        {
+          "id": "CareITSF36_T1T2",
+          "name": "SF 36 (T1+T2)",
+          "items": []
+        },
+        {
+          "id": "CareITSF36_T3",
+          "name": "SF 36 (T3) follow up",
+          "items": []
+        },
+        {
+          "id": "CareITSINGERICM",
+          "name": "SINGER - Patientenprofil",
+          "items": []
+        },
+        {
+          "id": "CareITSLDIARY",
+          "name": "Schlaflabor Tagebuch (Abend-Morgen-Protokoll)",
+          "items": []
+        },
+        {
+          "id": "CareITSOSERDISFIN",
+          "name": "Sozialdienst Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITSOSERPD",
+          "name": "Sozialdienst Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITSOSERRECFIN",
+          "name": "Sozialdienst Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITSOZEPI",
+          "name": "Sozialmedizinische Epikrise",
+          "items": []
+        },
+        {
+          "id": "CareITSPTHERDISFIN",
+          "name": "Logopädie Entlassbefund",
+          "items": []
+        },
+        {
+          "id": "CareITSPTHERPD",
+          "name": "Logopädie Verlaufsdokumentation",
+          "items": []
+        },
+        {
+          "id": "CareITSPTHERRECFIN",
+          "name": "Logopädie Aufnahmebefund",
+          "items": []
+        },
+        {
+          "id": "CareITSTAS",
+          "name": "Standardisiertes Assessment 8-918",
+          "items": []
+        },
+        {
+          "id": "CareITSTASTHERAPIE",
+          "name": "Standardisierte Assessments - Therapie",
+          "items": []
+        },
+        {
+          "id": "CareITTCT",
+          "name": "Trunk Control Test",
+          "items": []
+        },
+        {
+          "id": "CareITTEAMBP",
+          "name": "Teambesprechungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITTESTBATTERIESLEEP",
+          "name": "Testbatterie SLEEP",
+          "items": []
+        },
+        {
+          "id": "CareITTFEQB",
+          "name": "Testformular Einführung QB",
+          "items": []
+        },
+        {
+          "id": "CareITTinetti",
+          "name": "Tinetti-Test",
+          "items": []
+        },
+        {
+          "id": "CareITTUGTEST",
+          "name": "Timed Up and Go Test",
+          "items": []
+        },
+        {
+          "id": "CareITVerlegungsberichtSempa",
+          "name": "Pflegeüberleitungsprotokoll",
+          "items": []
+        },
+        {
+          "id": "CareITWOMAC",
+          "name": "WOMAC",
+          "items": []
+        },
+        {
+          "id": "CareITWound_airways",
+          "name": "Wunden - Atemweg",
+          "items": []
+        },
+        {
+          "id": "CareITWound_bedsore",
+          "name": "Wunden - Dekubitus",
+          "items": []
+        },
+        {
+          "id": "CareITWound_burn",
+          "name": "Wunden - Brandwunde",
+          "items": []
+        },
+        {
+          "id": "CareITWound_drainage",
+          "name": "Wunden - Drainagen & Sonden",
+          "items": []
+        },
+        {
+          "id": "CareITWound_drainage-pain",
+          "name": "Wunden - Schmerzkatheter",
+          "items": []
+        },
+        {
+          "id": "CareITWound_drainage-urine",
+          "name": "Wunden - Harnableitung",
+          "items": []
+        },
+        {
+          "id": "CareITWound_external_fixator",
+          "name": "Fixateur extern",
+          "items": []
+        },
+        {
+          "id": "CareITWound_gi-probes",
+          "name": "Wunden - GI-Sonden",
+          "items": []
+        },
+        {
+          "id": "CareITWound_other",
+          "name": "Wunden - Sonstiges (Pflege)",
+          "items": []
+        },
+        {
+          "id": "CareITWound_pain",
+          "name": "Wunden - Schmerzen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_skin_lesions",
+          "name": "Wunden - Hautveränderungen",
+          "items": []
+        },
+        {
+          "id": "CareITWound_stoma",
+          "name": "Wunden - Stuhlableitung",
+          "items": []
+        },
+        {
+          "id": "CareITWound_supply-a",
+          "name": "Wunden - Zugänge arteriell",
+          "items": []
+        },
+        {
+          "id": "CareITWound_supply-v",
+          "name": "Wunden - Zugänge venös",
+          "items": []
+        },
+        {
+          "id": "CareITWound_therapeutic-rider",
+          "name": "Wunde- Sonstiges (Therapie)",
+          "items": []
+        },
+        {
+          "id": "CareITWound_VPOLY",
+          "name": "Verletzungsmuster Polytrauma",
+          "items": []
+        },
+        {
+          "id": "CareITWound_wound",
+          "name": "Wunden - Wunde",
+          "items": []
+        },
+        {
+          "id": "CareITWUERZSCRE",
+          "name": "Würzburger Screening",
+          "items": []
+        },
+        {
+          "id": "CareITZOPA",
+          "name": "ZOPA Skala",
+          "items": []
         }
       ]
     },
@@ -274,13 +794,13 @@
         {
           "id": "aufnahme",
           "name": "Ärztliche Aufnahme",
-          "items": ["Anamnese", "Diagnosen", "Befunde"]
+          "items": [
+            "Anamnese",
+            "Diagnosen",
+            "Befunde"
+          ]
         }
       ]
     }
   ]
 }
-
-
-
-
