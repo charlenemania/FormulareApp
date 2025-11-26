@@ -3,7 +3,6 @@
     {
       "id": "mi",
       "name": "M&I",
-	  "url": "mi.careit.one"
       "formulare": [
         {
           "id": "wochenbett",
@@ -29,4 +28,5 @@
       ]
     }
   ]
+
 }
