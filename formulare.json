@@ -478,11 +478,6 @@
       "url": "mi.careit.one",
       "formulare": [
         {
-          "id": "",
-          "name": "",
-          "items": []
-        },
-        {
           "id": "CareIT360Rotation",
           "name": "360° Drehung (Schwerpunkt Parkinson)",
           "items": []
