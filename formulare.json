@@ -8,7 +8,7 @@
         {
           "id": "CareITAPSV",
           "name": "Akutschmerzdienst Visite",
-          "items": []
+          "items": ["Anforderungsstatus", "Akutschmerz Visite", ]
         },
         {
           "id": "CareIT_FEM",
