@@ -1,124 +1,4 @@
-[
-  {
-    "linkId": "NIT_BSYMP_g1",
-    "text": "Begleitsymptome",
-    "type": "group",
-    "item": [
-      { "linkId": "NIT_BSYMP_100", "text": "Dienst", "type": "choice" },
-      {
-        "linkId": "NIT_BSYMP_g2",
-        "text": "Frühdienst",
-        "type": "group",
-        "item": [
-          { "linkId": "NIT_BSYMP_224", "text": "0 = keine / 1 = leicht / 2 = mittel / 3 = stark / 4 = sehr stark", "type": "display" },
-          { "linkId": "NIT_BSYMP_200", "text": "Angst/Ängste", "type": "integer" },
-          { "linkId": "NIT_BSYMP_201", "text": "Aszites", "type": "integer" },
-          { "linkId": "NIT_BSYMP_202", "text": "Brodeln", "type": "integer" },
-          { "linkId": "NIT_BSYMP_203", "text": "Diarrhoe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_204", "text": "Dyspnoe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_205", "text": "Erbrechen", "type": "integer" },
-          { "linkId": "NIT_BSYMP_206", "text": "Husten", "type": "integer" },
-          { "linkId": "NIT_BSYMP_207", "text": "Halluzination", "type": "integer" },
-          { "linkId": "NIT_BSYMP_208", "text": "Inappetenz", "type": "integer" },
-          { "linkId": "NIT_BSYMP_209", "text": "Juckreiz", "type": "integer" },
-          { "linkId": "NIT_BSYMP_210", "text": "Fatigue", "type": "integer" },
-          { "linkId": "NIT_BSYMP_211", "text": "Mundtrockenheit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_212", "text": "Psychische Belastung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_213", "text": "Myoklonien", "type": "integer" },
-          { "linkId": "NIT_BSYMP_214", "text": "Obstipation", "type": "integer" },
-          { "linkId": "NIT_BSYMP_215", "text": "Schlafstörung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_216", "text": "Singultus", "type": "integer" },
-          { "linkId": "NIT_BSYMP_217", "text": "Epistaxis", "type": "integer" },
-          { "linkId": "NIT_BSYMP_218", "text": "Schwäche", "type": "integer" },
-          { "linkId": "NIT_BSYMP_219", "text": "Schwitzen", "type": "integer" },
-          { "linkId": "NIT_BSYMP_220", "text": "Schwindel", "type": "integer" },
-          { "linkId": "NIT_BSYMP_221", "text": "Stomatitis/Soor", "type": "integer" },
-          { "linkId": "NIT_BSYMP_222", "text": "Übelkeit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_223", "text": "Unruhe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_225", "text": "Verwirrtheit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_226", "text": "Verschleimung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_227", "text": "Ödeme/Lymphödeme", "type": "integer" },
-          { "linkId": "NIT_BSYMP_228", "text": "Müdigkeit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_229", "text": "Sodbrennen", "type": "integer" }
-        ]
-      },
-      {
-        "linkId": "NIT_BSYMP_g3",
-        "text": "Spätdienst",
-        "type": "group",
-        "item": [
-          { "linkId": "NIT_BSYMP_324", "text": "0 = keine / 1 = leicht / 2 = mittel / 3 = stark / 4 = sehr stark", "type": "display" },
-          { "linkId": "NIT_BSYMP_300", "text": "Angst/Ängste", "type": "integer" },
-          { "linkId": "NIT_BSYMP_301", "text": "Aszites", "type": "integer" },
-          { "linkId": "NIT_BSYMP_302", "text": "Brodeln", "type": "integer" },
-          { "linkId": "NIT_BSYMP_303", "text": "Diarrhoe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_304", "text": "Dyspnoe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_305", "text": "Erbrechen", "type": "integer" },
-          { "linkId": "NIT_BSYMP_306", "text": "Husten", "type": "integer" },
-          { "linkId": "NIT_BSYMP_307", "text": "Halluzination", "type": "integer" },
-          { "linkId": "NIT_BSYMP_308", "text": "Inappetenz", "type": "integer" },
-          { "linkId": "NIT_BSYMP_309", "text": "Juckreiz", "type": "integer" },
-          { "linkId": "NIT_BSYMP_310", "text": "Fatigue", "type": "integer" },
-          { "linkId": "NIT_BSYMP_311", "text": "Mundtrockenheit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_312", "text": "Psychische Belastung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_313", "text": "Myoklonien", "type": "integer" },
-          { "linkId": "NIT_BSYMP_314", "text": "Obstipation", "type": "integer" },
-          { "linkId": "NIT_BSYMP_315", "text": "Schlafstörung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_316", "text": "Singultus", "type": "integer" },
-          { "linkId": "NIT_BSYMP_317", "text": "Epistaxis", "type": "integer" },
-          { "linkId": "NIT_BSYMP_318", "text": "Schwäche", "type": "integer" },
-          { "linkId": "NIT_BSYMP_319", "text": "Schwitzen", "type": "integer" },
-          { "linkId": "NIT_BSYMP_320", "text": "Schwindel", "type": "integer" },
-          { "linkId": "NIT_BSYMP_321", "text": "Stomatitis/Soor", "type": "integer" },
-          { "linkId": "NIT_BSYMP_322", "text": "Übelkeit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_323", "text": "Unruhe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_325", "text": "Verwirrtheit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_326", "text": "Verschleimung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_327", "text": "Ödeme/Lymphödeme", "type": "integer" },
-          { "linkId": "NIT_BSYMP_328", "text": "Müdigkeit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_329", "text": "Sodbrennen", "type": "integer" }
-        ]
-      },
-      {
-        "linkId": "NIT_BSYMP_g4",
-        "text": "Nachtdienst",
-        "type": "group",
-        "item": [
-          { "linkId": "NIT_BSYMP_424", "text": "0 = keine / 1 = leicht / 2 = mittel / 3 = stark / 4 = sehr stark", "type": "display" },
-          { "linkId": "NIT_BSYMP_400", "text": "Angst/Ängste", "type": "integer" },
-          { "linkId": "NIT_BSYMP_401", "text": "Aszites", "type": "integer" },
-          { "linkId": "NIT_BSYMP_402", "text": "Brodeln", "type": "integer" },
-          { "linkId": "NIT_BSYMP_403", "text": "Diarrhoe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_404", "text": "Dyspnoe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_405", "text": "Erbrechen", "type": "integer" },
-          { "linkId": "NIT_BSYMP_406", "text": "Husten", "type": "integer" },
-          { "linkId": "NIT_BSYMP_407", "text": "Halluzination", "type": "integer" },
-          { "linkId": "NIT_BSYMP_408", "text": "Inappetenz", "type": "integer" },
-          { "linkId": "NIT_BSYMP_409", "text": "Juckreiz", "type": "integer" },
-          { "linkId": "NIT_BSYMP_410", "text": "Fatigue", "type": "integer" },
-          { "linkId": "NIT_BSYMP_411", "text": "Mundtrockenheit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_412", "text": "Psychische Belastung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_413", "text": "Myoklonien", "type": "integer" },
-          { "linkId": "NIT_BSYMP_414", "text": "Obstipation", "type": "integer" },
-          { "linkId": "NIT_BSYMP_415", "text": "Schlafstörung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_416", "text": "Singultus", "type": "integer" },
-          { "linkId": "NIT_BSYMP_417", "text": "Epistaxis", "type": "integer" },
-          { "linkId": "NIT_BSYMP_418", "text": "Schwäche", "type": "integer" },
-          { "linkId": "NIT_BSYMP_419", "text": "Schwitzen", "type": "integer" },
-          { "linkId": "NIT_BSYMP_420", "text": "Schwindel", "type": "integer" },
-          { "linkId": "NIT_BSYMP_421", "text": "Stomatitis/Soor", "type": "integer" },
-          { "linkId": "NIT_BSYMP_422", "text": "Übelkeit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_423", "text": "Unruhe", "type": "integer" },
-          { "linkId": "NIT_BSYMP_425", "text": "Verwirrtheit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_426", "text": "Verschleimung", "type": "integer" },
-          { "linkId": "NIT_BSYMP_427", "text": "Ödeme/Lymphödeme", "type": "integer" },
-          { "linkId": "NIT_BSYMP_428", "text": "Müdigkeit", "type": "integer" },
-          { "linkId": "NIT_BSYMP_429", "text": "Sodbrennen", "type": "integer" }
-        ]
-      }
-    ]
-  }
-]{
+{
   "demosysteme": [
     {
       "id": "leverkusen",
@@ -597,6 +477,11 @@
       "name": "M&I",
       "url": "mi.careit.one",
       "formulare": [
+        {
+          "id": "",
+          "name": "",
+          "items": []
+        },
         {
           "id": "CareIT360Rotation",
           "name": "360° Drehung (Schwerpunkt Parkinson)",
