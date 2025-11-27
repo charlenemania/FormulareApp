@@ -8,7 +8,11 @@
         {
           "id": "CareITAPSV",
           "name": "Akutschmerzdienst Visite",
-          "items": []
+          "items": [
+            { "id": "NIT_APSV_g1", "name": "Anforderungsstatus", "type": "group", "items":
+              { "id": "NIT_APSV_101", "name": "Medizinische Fragestellung", "type": "text"},
+              { "id": "NIT_APSV_102", "name": "Angeforderte Untersuchung", "type": "text"}
+          ]
         },
         {
           "id": "CareIT_FEM",
