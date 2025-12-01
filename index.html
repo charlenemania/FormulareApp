@@ -6,13 +6,13 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* Container für Suchfeld + X */
-    #search-container {
+    #search-container, #system-search-container {
       position: relative;
       width: 300px;
       margin: 0 auto 20px auto;
     }
 
-    #search {
+    #search, #system-search {
       width: 100%;
       padding-right: 24px;
       box-sizing: border-box;
@@ -109,23 +109,51 @@
       app.innerHTML = `
         <h2>${system.name}</h2>
         <button onclick="renderDemosysteme()">← Zurück</button>
+        <div id="system-search-container" style="margin:10px 0;">
+          <input type="text" id="system-search" placeholder="Formular in ${system.name} suchen..." onkeyup="searchFormulareInSystem('${system.id}')">
+        </div>
+        <div id="formular-list"></div>
       `;
 
-      system.formulare.forEach(f => {
+      renderFormularListe(system, system.formulare);
+    }
+
+    function renderFormularListe(system, formularArray) {
+      const listDiv = document.getElementById('formular-list');
+      listDiv.innerHTML = '';
+
+      formularArray.forEach(f => {
         const div = document.createElement('div');
         div.className = 'formular';
+
+        const searchTerm = document.getElementById('system-search')?.value || '';
+        const highlightedId = highlightMatch(f.id, searchTerm);
+        const highlightedName = highlightMatch(f.name, searchTerm);
+
         div.innerHTML = `
           <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
-            ${f.id}
+            ${highlightedId}
           </small>
-          ${f.name}
+          ${highlightedName}
         `;
-        div.onclick = () => {
-          cameFromSearch = false;
-          renderItems(system, f);
-        };
-        app.appendChild(div);
+
+        div.onclick = () => renderItems(system, f);
+        listDiv.appendChild(div);
       });
+    }
+
+    function searchFormulareInSystem(systemId) {
+      const term = document.getElementById('system-search').value.toLowerCase();
+      const system = data.demosysteme.find(ds => ds.id === systemId);
+      if (!system) return;
+
+      const filtered = system.formulare.filter(f => {
+        return f.id.toLowerCase().includes(term) ||
+               f.name.toLowerCase().includes(term) ||
+               (f.items && f.items.some(i => i.toLowerCase().includes(term)));
+      });
+
+      renderFormularListe(system, filtered);
     }
 
     function handleBack(systemId) {
@@ -177,8 +205,9 @@
         const ul = document.createElement('ul');
         ul.className = 'items';
         formular.items.forEach(item => {
+          const searchTerm = document.getElementById('system-search')?.value || '';
           const li = document.createElement('li');
-          li.innerHTML = highlightMatch(item, document.getElementById('search').value);
+          li.innerHTML = highlightMatch(item, searchTerm);
           ul.appendChild(li);
         });
         app.appendChild(ul);
