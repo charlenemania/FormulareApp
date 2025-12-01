@@ -49,9 +49,8 @@
     // Externe JSON-Datei laden und als Code anzeigen
     fetch(formular.questionnaireFile)
       .then(response => response.json())
+                // Download-Button hinzufügen
       .then(json => {
-                  59
-                    ügen
                   const downloadBtn = document.createElement('button');
                   downloadBtn.textContent = 'JSON herunterladen';
                   downloadBtn.style.marginTop = '10px';
@@ -109,6 +108,7 @@
   </script>
 </body>
 </html>
+
 
 
 
