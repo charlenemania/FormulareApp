@@ -5,17 +5,19 @@
   <title>Formulare Übersicht</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* kleines Styling für das X im Suchfeld */
+    /* Container für Suchfeld + X */
     #search-container {
       position: relative;
-      display: inline-block;
-      width: 300px;
+      width: 300px;        /* gewünschte Breite */
+      margin: 0 auto 20px auto; /* zentriert + Abstand nach unten */
     }
+
     #search {
       width: 100%;
       padding-right: 24px; /* Platz für das X */
       box-sizing: border-box;
     }
+
     #clear-search {
       position: absolute;
       right: 4px;
@@ -28,6 +30,7 @@
       color: #888;
       display: none; /* standardmäßig versteckt */
     }
+
     #clear-search:hover {
       color: #333;
     }
@@ -35,6 +38,7 @@
 </head>
 <body>
   <h1>Formulare Übersicht</h1>
+
   <div id="search-container">
     <input type="text" id="search" placeholder="Formular suchen..." onkeyup="searchFormular()">
     <button id="clear-search" onclick="clearSearch()">×</button>
