@@ -40,18 +40,37 @@
         app.appendChild(div);
       });
     }
-    function renderItems(system, formular) {
-      const app = document.getElementById('app');
-      app.innerHTML = `<h2>${formular.name}</h2><button onclick="renderFormulare({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>`;
-      const ul = document.createElement('ul');
-      ul.className = 'items';
-      formular.items.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        ul.appendChild(li);
+   function renderItems(system, formular) {
+  const app = document.getElementById('app');
+  app.innerHTML = `<h2>${formular.name}</h2><button onclick="renderFormulare({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>`;
+  
+  // Prüfen, ob questionnaireFile vorhanden ist
+  if (formular.questionnaireFile) {
+    // Externe JSON-Datei laden und als Code anzeigen
+    fetch(formular.questionnaireFile)
+      .then(response => response.json())
+      .then(json => {
+        const pre = document.createElement('pre');
+        const code = document.createElement('code');
+        code.textContent = JSON.stringify(json, null, 2);
+        pre.appendChild(code);
+        app.appendChild(pre);
+      })
+      .catch(error => {
+        app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
       });
-      app.appendChild(ul);
-    }
+  } else {
+    // Bisheriges Verhalten: Items als Liste anzeigen
+    const ul = document.createElement('ul');
+    ul.className = 'items';
+    formular.items.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      ul.appendChild(li);
+    });
+    app.appendChild(ul);
+  }
+}
     function searchFormular() {
       const term = document.getElementById('search').value.toLowerCase();
       const app = document.getElementById('app');
@@ -70,6 +89,7 @@
   </script>
 </body>
 </html>
+
 
 
 
