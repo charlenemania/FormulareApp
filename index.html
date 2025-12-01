@@ -6,19 +6,19 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* Container für Suchfeld + X */
-    #search-container, #system-search-container {
+    .search-container {
       position: relative;
       width: 300px;
       margin: 0 auto 20px auto;
     }
 
-    #search, #system-search {
+    input.search-input {
       width: 100%;
       padding-right: 24px;
       box-sizing: border-box;
     }
 
-    #clear-search {
+    .clear-search {
       position: absolute;
       right: 4px;
       top: 50%;
@@ -31,7 +31,7 @@
       display: none;
     }
 
-    #clear-search:hover {
+    .clear-search:hover {
       color: #333;
     }
 
@@ -62,9 +62,10 @@
 <body>
   <h1>Formulare Übersicht</h1>
 
-  <div id="search-container">
-    <input type="text" id="search" placeholder="Formular suchen..." onkeyup="searchFormular()">
-    <button id="clear-search" onclick="clearSearch()">×</button>
+  <!-- Haupt-Suchfeld nur auf Übersichtsseite -->
+  <div id="search-container" class="search-container">
+    <input type="text" id="search" class="search-input" placeholder="Formular suchen..." onkeyup="searchFormular()">
+    <button id="clear-search" class="clear-search" onclick="clearSearch()">×</button>
   </div>
 
   <div id="app"></div>
@@ -82,6 +83,7 @@
       });
 
     function renderDemosysteme() {
+      document.getElementById('search-container').style.display = 'block'; // Haupt-Suche sichtbar
       const app = document.getElementById('app');
       app.innerHTML = '';
       cameFromSearch = false;
@@ -102,16 +104,20 @@
     }
 
     function renderFormulare(system) {
-      const app = document.getElementById('app');
+      document.getElementById('search-container').style.display = 'none'; // Haupt-Suche ausblenden
       cameFromSearch = false;
-      toggleClearButton();
 
+      const app = document.getElementById('app');
       app.innerHTML = `
         <h2>${system.name}</h2>
         <button onclick="renderDemosysteme()">← Zurück</button>
-        <div id="system-search-container" style="margin:10px 0;">
-          <input type="text" id="system-search" placeholder="Formular in ${system.name} suchen..." onkeyup="searchFormulareInSystem('${system.id}')">
+
+        <!-- System-spezifisches Suchfeld -->
+        <div id="system-search-container" class="search-container">
+          <input type="text" id="system-search" class="search-input" placeholder="Formular in ${system.name} suchen..." onkeyup="searchFormulareInSystem('${system.id}')">
+          <button id="clear-system-search" class="clear-search" onclick="clearSystemSearch('${system.id}')">×</button>
         </div>
+
         <div id="formular-list"></div>
       `;
 
@@ -154,6 +160,15 @@
       });
 
       renderFormularListe(system, filtered);
+
+      // Clear-Button anzeigen
+      const btn = document.getElementById('clear-system-search');
+      btn.style.display = term ? 'block' : 'none';
+    }
+
+    function clearSystemSearch(systemId) {
+      document.getElementById('system-search').value = '';
+      searchFormulareInSystem(systemId);
     }
 
     function handleBack(systemId) {
