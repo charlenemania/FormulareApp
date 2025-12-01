@@ -24,82 +24,115 @@
       data.demosysteme.forEach(ds => {
         const div = document.createElement('div');
         div.className = 'system';
-        div.textContent = ds.name;
+
+        // ➤ Neu: URL klein oben anzeigen
+        div.innerHTML = `
+          <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
+            ${ds.url || ''}
+          </small>
+          ${ds.name}
+        `;
+
         div.onclick = () => renderFormulare(ds);
         app.appendChild(div);
       });
     }
+
     function renderFormulare(system) {
       const app = document.getElementById('app');
-      app.innerHTML = `<h2>${system.name}</h2><button onclick="renderDemosysteme()">← Zurück</button>`;
+      app.innerHTML = `
+        <h2>${system.name}</h2>
+        <button onclick="renderDemosysteme()">← Zurück</button>
+      `;
+
       system.formulare.forEach(f => {
-       const div = document.createElement('div');
+        const div = document.createElement('div');
         div.className = 'formular';
-        div.innerHTML = `<small style="color: #888; display: block; margin-bottom: 4px; font-size: 0.75rem;">${f.id}</small>${f.name}`;
+
+        // ➤ Formular-ID anzeigen
+        div.innerHTML = `
+          <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
+            ${f.id}
+          </small>
+          ${f.name}
+        `;
+
         div.onclick = () => renderItems(system, f);
         app.appendChild(div);
       });
     }
-   function renderItems(system, formular) {
-  const app = document.getElementById('app');
-  app.innerHTML = `<h2>${formular.name}</h2><button onclick="renderFormulare({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>`;
-  
-  // Prüfen, ob questionnaireFile vorhanden ist
-  if (formular.questionnaireFile) {
-    // Externe JSON-Datei laden und als Code anzeigen
-    fetch(formular.questionnaireFile)
-      .then(response => response.json())
-                // Download-Button hinzufügen
-      .then(json => {
-                  const downloadBtn = document.createElement('button');
-                  downloadBtn.textContent = 'download JSON';
-                  downloadBtn.style.marginTop = '10px';
-                  downloadBtn.style.padding = '8px 16px';
-                  downloadBtn.style.cursor = 'pointer';
-                  downloadBtn.onclick = () => {
-                                const filename = formular.questionnaireFile.split('/').pop();
-                                const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
-                                const url = URL.createObjectURL(blob);
-                                const a = document.createElement('a');
-                                a.href = url;
-                                a.download = filename;
-                                a.click();
-                                URL.revokeObjectURL(url);
-                              };
-                  app.appendChild(downloadBtn);
-        
-        const pre = document.createElement('pre');
-        const code = document.createElement('code');
-        code.textContent = JSON.stringify(json, null, 2);
-        pre.appendChild(code);
-        app.appendChild(pre);
 
-      })
-      .catch(error => {
-        app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
-      });
-  } else {
-    // Bisheriges Verhalten: Items als Liste anzeigen
-    const ul = document.createElement('ul');
-    ul.className = 'items';
-    formular.items.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = item;
-      ul.appendChild(li);
-    });
-    app.appendChild(ul);
-  }
-}
+    function renderItems(system, formular) {
+      const app = document.getElementById('app');
+      app.innerHTML = `
+        <h2>${formular.name}</h2>
+        <button onclick="renderFormulare({id:'${system.id}', name:'${system.name}', formulare:data.demosysteme.find(ds => ds.id==='${system.id}').formulare})">← Zurück</button>
+      `;
+
+      if (formular.questionnaireFile) {
+        fetch(formular.questionnaireFile)
+          .then(response => response.json())
+          .then(json => {
+            const downloadBtn = document.createElement('button');
+            downloadBtn.textContent = 'download JSON';
+            downloadBtn.style.marginTop = '10px';
+            downloadBtn.style.padding = '8px 16px';
+            downloadBtn.style.cursor = 'pointer';
+            downloadBtn.onclick = () => {
+              const filename = formular.questionnaireFile.split('/').pop();
+              const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = filename;
+              a.click();
+              URL.revokeObjectURL(url);
+            };
+            app.appendChild(downloadBtn);
+
+            const pre = document.createElement('pre');
+            const code = document.createElement('code');
+            code.textContent = JSON.stringify(json, null, 2);
+            pre.appendChild(code);
+            app.appendChild(pre);
+          })
+          .catch(error => {
+            app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
+          });
+      } else {
+        const ul = document.createElement('ul');
+        ul.className = 'items';
+        formular.items.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          ul.appendChild(li);
+        });
+        app.appendChild(ul);
+      }
+    }
+
     function searchFormular() {
       const term = document.getElementById('search').value.toLowerCase();
       const app = document.getElementById('app');
       app.innerHTML = '';
       if (!term) return renderDemosysteme();
+
       data.demosysteme.forEach(ds => {
         ds.formulare.forEach(f => {
-          if (f.id.toLowerCase().includes(term) || f.name.toLowerCase().includes(term) || f.items.some(i => i.toLowerCase().includes(term))) {
+          if (f.id.toLowerCase().includes(term) ||
+              f.name.toLowerCase().includes(term) ||
+              f.items.some(i => i.toLowerCase().includes(term))) {
+
             const div = document.createElement('div');
-            div.textContent = `${f.name} (System: ${ds.name})`;
+            div.className = 'formular';
+
+            div.innerHTML = `
+              <small style="color:#888; display:block; font-size:0.75rem;">
+                ${f.id}
+              </small>
+              ${f.name} (System: ${ds.name})
+            `;
+
             div.onclick = () => renderItems(ds, f);
             app.appendChild(div);
           }
@@ -109,18 +142,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
