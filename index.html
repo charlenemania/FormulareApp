@@ -8,7 +8,7 @@
     /* Container für Suchfeld + X */
     #search-container {
       position: relative;
-      width: 300px;        /* gewünschte Breite */
+      width: 300px;
       margin: 0 auto 20px auto; /* zentriert + Abstand nach unten */
     }
 
@@ -34,6 +34,13 @@
     #clear-search:hover {
       color: #333;
     }
+
+    /* Suchhighlight */
+    mark.search-highlight {
+      background-color: rgb(217, 233, 238);
+      padding: 0 2px;
+      border-radius: 2px;
+    }
   </style>
 </head>
 <body>
@@ -48,8 +55,8 @@
 
   <script>
     let data = null;
-    let lastSearchTerm = "";      // speichert letzten Suchbegriff
-    let cameFromSearch = false;   // merkt sich, ob Navigation aus der Suche kam
+    let lastSearchTerm = "";
+    let cameFromSearch = false;
 
     fetch('formulare.json')
       .then(response => response.json())
@@ -184,12 +191,18 @@
           ) {
             const div = document.createElement('div');
             div.className = 'formular';
+
+            // Highlight ID & Name
+            const highlightedId = highlightMatch(f.id, term);
+            const highlightedName = highlightMatch(f.name, term);
+
             div.innerHTML = `
               <small style="color:#888; display:block; font-size:0.75rem;">
-                ${f.id}
+                ${highlightedId}
               </small>
-              ${f.name} (System: ${ds.name})
+              ${highlightedName} (System: ${ds.name})
             `;
+
             div.onclick = () => {
               cameFromSearch = true;
               renderItems(ds, f);
@@ -198,6 +211,12 @@
           }
         });
       });
+    }
+
+    function highlightMatch(text, term) {
+      if (!term) return text;
+      const regex = new RegExp(`(${term})`, 'gi');
+      return text.replace(regex, `<mark class="search-highlight">$1</mark>`);
     }
 
     function clearSearch() {
