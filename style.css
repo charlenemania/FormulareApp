@@ -48,7 +48,7 @@ body {
   background: #fff;
   border: 1px solid #e1e4e8;
   border-radius: 6px;
-  padding: 10px 14px;
+  padding: 7px 18px;
   margin-bottom: 16px;
   cursor: pointer;
   transition: background 0.2s;
@@ -92,6 +92,7 @@ ul.items li {
   font-size: 1rem;
 }
 CSS aktualisiert: Minimalistisches, modernes Design im Stil von GitHub hinzugefügt, alle bunten Farben entfernt.
+
 
 
 
