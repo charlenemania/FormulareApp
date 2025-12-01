@@ -28,6 +28,7 @@
         {
           "id": "CareITBSYMP",
           "name": "Begleitsymptome",
+                      "questionnaireFile": "questionnaires/leverkusen_CareITBSYMP.json",
           "items": []
         },
         {
