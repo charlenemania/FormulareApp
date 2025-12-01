@@ -135,7 +135,7 @@
         return;
       }
       const ds = data.demosysteme.find(d => d.id === systemId);
-      renderFormulare(ds);
+      if (ds) renderFormulare(ds);
     }
 
     function renderItems(system, formular) {
@@ -173,7 +173,7 @@
           .catch(error => {
             app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
           });
-      } else {
+      } else if (formular.items && formular.items.length) {
         const ul = document.createElement('ul');
         ul.className = 'items';
         formular.items.forEach(item => {
@@ -201,7 +201,7 @@
           if (
             f.id.toLowerCase().includes(term) ||
             f.name.toLowerCase().includes(term) ||
-            f.items.some(i => i.toLowerCase().includes(term))
+            (f.items && f.items.some(i => i.toLowerCase().includes(term)))
           ) {
             const div = document.createElement('div');
             div.className = 'formular';
@@ -213,7 +213,7 @@
               <small style="color:#888; display:block; font-size:0.75rem;">
                 ${highlightedId}
               </small>
-              ${highlightedName} (System: ${ds.name})
+              ${highlightedName} <span style="font-size:0.85rem; font-style:italic; color:#555;">(System: ${ds.name})</span>
             `;
 
             div.onclick = () => {
@@ -227,7 +227,7 @@
     }
 
     function highlightMatch(text, term) {
-      if (!term) return text;
+      if (!term || !text) return text;
       const regex = new RegExp(`(${term})`, 'gi');
       return text.replace(regex, `<mark class="search-highlight">$1</mark>`);
     }
