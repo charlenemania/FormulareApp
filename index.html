@@ -50,13 +50,8 @@
     fetch(formular.questionnaireFile)
       .then(response => response.json())
       .then(json => {
-        const pre = document.createElement('pre');
-        const code = document.createElement('code');
-        code.textContent = JSON.stringify(json, null, 2);
-        pre.appendChild(code);
-        app.appendChild(pre);
-
-                  // Download-Button hinzufügen
+                  59
+                    ügen
                   const downloadBtn = document.createElement('button');
                   downloadBtn.textContent = 'JSON herunterladen';
                   downloadBtn.style.marginTop = '10px';
@@ -73,6 +68,13 @@
                                 URL.revokeObjectURL(url);
                               };
                   app.appendChild(downloadBtn);
+        
+        const pre = document.createElement('pre');
+        const code = document.createElement('code');
+        code.textContent = JSON.stringify(json, null, 2);
+        pre.appendChild(code);
+        app.appendChild(pre);
+
       })
       .catch(error => {
         app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
@@ -107,6 +109,7 @@
   </script>
 </body>
 </html>
+
 
 
 
