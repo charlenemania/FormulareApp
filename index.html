@@ -5,34 +5,46 @@
   <title>Formulare Übersicht</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Container für Suchfeld + X */
+    /* Suchfelder */
     .search-container {
       position: relative;
-      width: 300px;
-      margin: 0 auto 20px auto;
+      width: 100%;
+      max-width: 400px;
+      margin: 32px auto 24px auto; /* zentriert + Abstand */
     }
 
-    input.search-input {
-      width: 100%;
-      padding-right: 24px;
+    .search-input {
       box-sizing: border-box;
+      width: 100%;
+      padding: 10px 40px 10px 16px; /* rechts Platz für X */
+      border-radius: 6px;
+      border: 1px solid #e1e4e8;
+      background: #fff;
+      font-size: 1rem;
+      display: block;
     }
 
     .clear-search {
+      background: none;
+      border: none;
+      color: #888;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0 4px;
+      height: 32px;
+      width: 32px;
+      line-height: 1;
+      border-radius: 100%;
       position: absolute;
-      right: 4px;
+      right: 8px;
       top: 50%;
       transform: translateY(-50%);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      color: #888;
       display: none;
     }
 
     .clear-search:hover {
-      color: #333;
+      background: #eaecef;
+      color: #24292f;
     }
 
     /* Suchhighlight */
@@ -83,7 +95,7 @@
       });
 
     function renderDemosysteme() {
-      document.getElementById('search-container').style.display = 'block'; // Haupt-Suche sichtbar
+      document.getElementById('search-container').style.display = 'block';
       const app = document.getElementById('app');
       app.innerHTML = '';
       cameFromSearch = false;
@@ -104,7 +116,7 @@
     }
 
     function renderFormulare(system) {
-      document.getElementById('search-container').style.display = 'none'; // Haupt-Suche ausblenden
+      document.getElementById('search-container').style.display = 'none';
       cameFromSearch = false;
 
       const app = document.getElementById('app');
@@ -114,8 +126,11 @@
 
         <!-- System-spezifisches Suchfeld -->
         <div id="system-search-container" class="search-container">
-          <input type="text" id="system-search" class="search-input" placeholder="Formular in ${system.name} suchen..." onkeyup="searchFormulareInSystem('${system.id}')">
-          <button id="clear-system-search" class="clear-search" onclick="clearSystemSearch('${system.id}')">×</button>
+          <input type="text" id="system-search" class="search-input"
+                 placeholder="Formular in ${system.name} suchen..."
+                 onkeyup="searchFormulareInSystem('${system.id}')">
+          <button id="clear-system-search" class="clear-search"
+                  onclick="clearSystemSearch('${system.id}')">×</button>
         </div>
 
         <div id="formular-list"></div>
@@ -161,7 +176,6 @@
 
       renderFormularListe(system, filtered);
 
-      // Clear-Button anzeigen
       const btn = document.getElementById('clear-system-search');
       btn.style.display = term ? 'block' : 'none';
     }
