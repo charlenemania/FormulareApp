@@ -4,10 +4,42 @@
   <meta charset="UTF-8">
   <title>Formulare Übersicht</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* kleines Styling für das X im Suchfeld */
+    #search-container {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+    }
+    #search {
+      width: 100%;
+      padding-right: 24px; /* Platz für das X */
+      box-sizing: border-box;
+    }
+    #clear-search {
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #888;
+      display: none; /* standardmäßig versteckt */
+    }
+    #clear-search:hover {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <h1>Formulare Übersicht</h1>
-  <input type="text" id="search" placeholder="Formular suchen..." onkeyup="searchFormular()">
+  <div id="search-container">
+    <input type="text" id="search" placeholder="Formular suchen..." onkeyup="searchFormular()">
+    <button id="clear-search" onclick="clearSearch()">×</button>
+  </div>
+
   <div id="app"></div>
 
   <script>
@@ -25,19 +57,18 @@
     function renderDemosysteme() {
       const app = document.getElementById('app');
       app.innerHTML = '';
-      cameFromSearch = false;   // bei normaler Navigation zurücksetzen
+      cameFromSearch = false;
+      toggleClearButton();
 
       data.demosysteme.forEach(ds => {
         const div = document.createElement('div');
         div.className = 'system';
-
         div.innerHTML = `
           <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
             ${ds.url || ""}
           </small>
           ${ds.name}
         `;
-
         div.onclick = () => renderFormulare(ds);
         app.appendChild(div);
       });
@@ -45,7 +76,8 @@
 
     function renderFormulare(system) {
       const app = document.getElementById('app');
-      cameFromSearch = false; // nicht aus Suche
+      cameFromSearch = false;
+      toggleClearButton();
 
       app.innerHTML = `
         <h2>${system.name}</h2>
@@ -55,38 +87,32 @@
       system.formulare.forEach(f => {
         const div = document.createElement('div');
         div.className = 'formular';
-
         div.innerHTML = `
           <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
             ${f.id}
           </small>
           ${f.name}
         `;
-
         div.onclick = () => {
           cameFromSearch = false;
           renderItems(system, f);
         };
-
         app.appendChild(div);
       });
     }
 
     function handleBack(systemId) {
       if (cameFromSearch) {
-        // zurück zu den Suchergebnissen
         document.getElementById('search').value = lastSearchTerm;
         searchFormular();
         return;
       }
-
       const ds = data.demosysteme.find(d => d.id === systemId);
       renderFormulare(ds);
     }
 
     function renderItems(system, formular) {
       const app = document.getElementById('app');
-
       app.innerHTML = `
         <h2>${formular.name}</h2>
         <button onclick="handleBack('${system.id}')">← Zurück</button>
@@ -101,7 +127,6 @@
             downloadBtn.style.marginTop = '10px';
             downloadBtn.style.padding = '8px 16px';
             downloadBtn.style.cursor = 'pointer';
-
             downloadBtn.onclick = () => {
               const filename = formular.questionnaireFile.split('/').pop();
               const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
@@ -112,7 +137,6 @@
               a.click();
               URL.revokeObjectURL(url);
             };
-
             app.appendChild(downloadBtn);
 
             const pre = document.createElement('pre');
@@ -124,33 +148,28 @@
           .catch(error => {
             app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
           });
-
       } else {
         const ul = document.createElement('ul');
         ul.className = 'items';
-
         formular.items.forEach(item => {
           const li = document.createElement('li');
           li.textContent = item;
           ul.appendChild(li);
         });
-
         app.appendChild(ul);
       }
     }
 
     function searchFormular() {
       const term = document.getElementById('search').value.toLowerCase();
-      lastSearchTerm = term;    // SUCHBEGRIFF SPEICHERN
-      cameFromSearch = false;   // aktuell befinden wir uns in der Suchübersicht
+      lastSearchTerm = term;
+      cameFromSearch = false;
+      toggleClearButton();
 
       const app = document.getElementById('app');
       app.innerHTML = '';
 
-      if (!term) {
-        cameFromSearch = false;
-        return renderDemosysteme();
-      }
+      if (!term) return renderDemosysteme();
 
       data.demosysteme.forEach(ds => {
         ds.formulare.forEach(f => {
@@ -161,23 +180,33 @@
           ) {
             const div = document.createElement('div');
             div.className = 'formular';
-
             div.innerHTML = `
               <small style="color:#888; display:block; font-size:0.75rem;">
                 ${f.id}
               </small>
               ${f.name} (System: ${ds.name})
             `;
-
             div.onclick = () => {
-              cameFromSearch = true;  // wir kommen aus der Suche!
+              cameFromSearch = true;
               renderItems(ds, f);
             };
-
             app.appendChild(div);
           }
         });
       });
+    }
+
+    function clearSearch() {
+      document.getElementById('search').value = '';
+      lastSearchTerm = '';
+      cameFromSearch = false;
+      toggleClearButton();
+      renderDemosysteme();
+    }
+
+    function toggleClearButton() {
+      const btn = document.getElementById('clear-search');
+      btn.style.display = document.getElementById('search').value ? 'block' : 'none';
     }
   </script>
 </body>
