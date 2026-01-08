@@ -78,6 +78,22 @@
   <div id="search-container" class="search-container">
     <input type="text" id="search" class="search-input" placeholder="Formular suchen..." onkeyup="searchFormular()">
     <button id="clear-search" class="clear-search" onclick="clearSearch()">×</button>
+    
+        <div id="search-filters" style="max-width:400px;margin:0 auto 8px auto;font-size:0.85rem;">
+      <label>
+        <input type="checkbox" id="filter-title" checked>
+        Formulartitel
+      </label>
+      <label style="margin-left:12px;">
+        <input type="checkbox" id="filter-id" checked>
+        Formularname
+      </label>
+      <label style="margin-left:12px;">
+        <input type="checkbox" id="filter-content">
+        Formularinhalt
+      </label>
+    </div>
+
   </div>
 
   <div id="app"></div>
@@ -125,21 +141,55 @@
         <button onclick="renderDemosysteme()">← Zurück</button>
 
         <!-- System-spezifisches Suchfeld -->
-        <div id="system-search-container" class="search-container">
-          <input type="text" id="system-search" class="search-input"
-                 placeholder="Formular in ${system.name} suchen..."
-                 onkeyup="searchFormulareInSystem('${system.id}')">
-          <button id="clear-system-search" class="clear-search"
-                  onclick="clearSystemSearch('${system.id}')">×</button>
-        </div>
+       <div id="system-search-container" class="search-container">
+  <input type="text" id="system-search" class="search-input"
+         placeholder="Formular in ${system.name} suchen..."
+         onkeyup="searchFormulareInSystem('${system.id}')">
+  <button id="clear-system-search" class="clear-search"
+          onclick="clearSystemSearch('${system.id}')">×</button>
+    </div>
+    
+    <div id="system-search-filters"
+         style="max-width:400px;margin:0 auto 8px auto;font-size:0.85rem;">
+      <label>
+        <input type="checkbox" id="system-filter-title" checked>
+        Formulartitel
+      </label>
+      <label style="margin-left:12px;">
+        <input type="checkbox" id="system-filter-id" checked>
+        Formularname
+      </label>
+      <label style="margin-left:12px;">
+        <input type="checkbox" id="system-filter-content">
+        Formularinhalt
+      </label>
+    </div>
+    
+    <div id="formular-list"></div>
 
-        <div id="formular-list"></div>
       `;
 
       renderFormularListe(system, system.formulare);
     }
 
     function renderFormularListe(system, formularArray) {
+      function matchesFormular(f, term, options) {
+      const t = term.toLowerCase();
+      let match = false;
+    
+      if (options.byId && f.id && f.id.toLowerCase().includes(t)) match = true;
+      if (options.byName && f.name && f.name.toLowerCase().includes(t)) match = true;
+    
+      if (options.byContent) {
+        if (f.items && f.items.some(i => (i || '').toLowerCase().includes(t))) {
+          match = true;
+        }
+        // Optional: Inhalte aus questionnaireFile durchsuchen
+      }
+    
+      return match;
+    }
+
       const listDiv = document.getElementById('formular-list');
       listDiv.innerHTML = '';
 
@@ -163,16 +213,24 @@
       });
     }
 
-    function searchFormulareInSystem(systemId) {
+     function searchFormulareInSystem(systemId) {
       const term = document.getElementById('system-search').value.toLowerCase();
       const system = data.demosysteme.find(ds => ds.id === systemId);
       if (!system) return;
-
-      const filtered = system.formulare.filter(f => {
-        return f.id.toLowerCase().includes(term) ||
-               f.name.toLowerCase().includes(term) ||
-               (f.items && f.items.some(i => i.toLowerCase().includes(term)));
-      });
+    
+      const filterOptions = {
+        byName: document.getElementById('system-filter-title')?.checked ?? true,
+        byId: document.getElementById('system-filter-id')?.checked ?? true,
+        byContent: document.getElementById('system-filter-content')?.checked ?? false
+      };
+    
+      const filtered = system.formulare.filter(f => matchesFormular(f, term, filterOptions));
+      renderFormularListe(system, filtered);
+    
+      const btn = document.getElementById('clear-system-search');
+      btn.style.display = term ? 'block' : 'none';
+    }
+    );
 
       renderFormularListe(system, filtered);
 
@@ -243,46 +301,47 @@
       }
     }
 
-    function searchFormular() {
-      const term = document.getElementById('search').value.toLowerCase();
-      lastSearchTerm = term;
-      cameFromSearch = false;
-      toggleClearButton();
-
-      const app = document.getElementById('app');
-      app.innerHTML = '';
-
-      if (!term) return renderDemosysteme();
-
-      data.demosysteme.forEach(ds => {
-        ds.formulare.forEach(f => {
-          if (
-            f.id.toLowerCase().includes(term) ||
-            f.name.toLowerCase().includes(term) ||
-            (f.items && f.items.some(i => i.toLowerCase().includes(term)))
-          ) {
-            const div = document.createElement('div');
-            div.className = 'formular';
-
-            const highlightedId = highlightMatch(f.id, term);
-            const highlightedName = highlightMatch(f.name, term);
-
-            div.innerHTML = `
-              <small style="color:#888; display:block; font-size:0.75rem;">
-                ${highlightedId}
-              </small>
-              ${highlightedName} <span style="font-size:0.85rem; font-style:italic; color:#555;">(System: ${ds.name})</span>
-            `;
-
-            div.onclick = () => {
-              cameFromSearch = true;
-              renderItems(ds, f);
-            };
-            app.appendChild(div);
-          }
+      function searchFormular() {
+        const term = document.getElementById('search').value.toLowerCase();
+        lastSearchTerm = term;
+        cameFromSearch = false;
+        toggleClearButton();
+      
+        const app = document.getElementById('app');
+        app.innerHTML = '';
+        if (!term) return renderDemosysteme();
+      
+        const filterOptions = {
+          byName: document.getElementById('filter-title')?.checked ?? true,
+          byId: document.getElementById('filter-id')?.checked ?? true,
+          byContent: document.getElementById('filter-content')?.checked ?? false
+        };
+      
+        data.demosysteme.forEach(ds => {
+          ds.formulare.forEach(f => {
+            if (matchesFormular(f, term, filterOptions)) {
+              const div = document.createElement('div');
+              div.className = 'formular';
+              const highlightedId = highlightMatch(f.id, term);
+              const highlightedName = highlightMatch(f.name, term);
+              div.innerHTML = `
+                <small style="color:#888; display:block; font-size:0.75rem;">
+                  ${highlightedId}
+                </small>
+                ${highlightedName}
+                <span style="font-size:0.85rem; font-style:italic; color:#555;">
+                  (System: ${ds.name})
+                </span>
+              `;
+              div.onclick = () => {
+                cameFromSearch = true;
+                renderItems(ds, f);
+              };
+              app.appendChild(div);
+            }
+          });
         });
-      });
-    }
+      }
 
     function highlightMatch(text, term) {
       if (!term || !text) return text;
@@ -305,3 +364,4 @@
   </script>
 </body>
 </html>
+
