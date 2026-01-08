@@ -1,307 +1,346 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Formulare Übersicht</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Suchfelder */
-    .search-container {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      margin: 32px auto 24px auto; /* zentriert + Abstand */
-    }
+Formulare Übersicht
 
-    .search-input {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 10px 40px 10px 16px; /* rechts Platz für X */
-      border-radius: 6px;
-      border: 1px solid #e1e4e8;
-      background: #fff;
-      font-size: 1rem;
-      display: block;
-    }
+/* Suchfelder */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 32px auto 24px auto; /* zentriert + Abstand */
+}
 
-    .clear-search {
-      background: none;
-      border: none;
-      color: #888;
-      font-size: 1.3rem;
-      cursor: pointer;
-      padding: 0 4px;
-      height: 32px;
-      width: 32px;
-      line-height: 1;
-      border-radius: 100%;
-      position: absolute;
-      right: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: none;
-    }
+.search-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 40px 10px 16px; /* rechts Platz für X */
+  border-radius: 6px;
+  border: 1px solid #e1e4e8;
+  background: #fff;
+  font-size: 1rem;
+  display: block;
+}
 
-    .clear-search:hover {
-      background: #eaecef;
-      color: #24292f;
-    }
+.clear-search {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0 4px;
+  height: 32px;
+  width: 32px;
+  line-height: 1;
+  border-radius: 100%;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
 
-    /* Suchhighlight */
-    mark.search-highlight {
-      background-color: rgb(217, 233, 238);
-      padding: 0 2px;
-      border-radius: 2px;
-    }
+.clear-search:hover {
+  background: #eaecef;
+  color: #24292f;
+}
 
-    /* Download JSON Button */
-    button.download-json {
-      background-color: rgb(217, 233, 238);
-      border: 1px solid #d9e9ee;
-      border-radius: 4px;
-      padding: 8px 16px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 10px;
-      color: #24292f;
-    }
+/* Suchhighlight */
+mark.search-highlight {
+  background-color: rgb(217, 233, 238);
+  padding: 0 2px;
+  border-radius: 2px;
+}
 
-    button.download-json:hover {
-      background-color: rgb(198, 223, 230);
-    }
-  </style>
-</head>
-<body>
-  <h1>Formulare Übersicht</h1>
+/* Download JSON Button */
+button.download-json {
+  background-color: rgb(217, 233, 238);
+  border: 1px solid #d9e9ee;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #24292f;
+}
 
-  <!-- Haupt-Suchfeld nur auf Übersichtsseite -->
-  <div id="search-container" class="search-container">
-    <input type="text" id="search" class="search-input" placeholder="Formular suchen..." onkeyup="searchFormular()">
-    <button id="clear-search" class="clear-search" onclick="clearSearch()">×</button>
+button.download-json:hover {
+  background-color: rgb(198, 223, 230);
+}
+
+Formulare Übersicht
+===================
+
+<div id="search-container" class="search-container">
+  <input type="text" id="search" class="search-input"
+         placeholder="Formular suchen..." onkeyup="searchFormular()">
+  <button id="clear-search" class="clear-search"
+          onclick="clearSearch()">×</button>
+
+  <!-- NEU: globale Filter -->
+  <div id="search-filters"
+       style="max-width:400px;margin:8px auto 0 auto;font-size:0.85rem;">
+    <label>
+      <input type="checkbox" id="filter-title" checked>
+      Formulartitel
+    </label>
+    <label style="margin-left:12px;">
+      <input type="checkbox" id="filter-id" checked>
+      Formularname
+    </label>
+    <label style="margin-left:12px;">
+      <input type="checkbox" id="filter-content">
+      Formularinhalt
+    </label>
   </div>
+</div>
 
-  <div id="app"></div>
+<div id="app"></div>
 
-  <script>
-    let data = null;
-    let lastSearchTerm = "";
-    let cameFromSearch = false;
+<script>
+let data = null;
+let lastSearchTerm = "";
+let cameFromSearch = false;
 
-    fetch('formulare.json')
+fetch('formulare.json')
+  .then(response => response.json())
+  .then(json => {
+    data = json;
+    renderDemosysteme();
+  });
+
+function renderDemosysteme() {
+  document.getElementById('search-container').style.display = 'block';
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  cameFromSearch = false;
+  toggleClearButton();
+  data.demosysteme.forEach(ds => {
+    const div = document.createElement('div');
+    div.className = 'system';
+    div.innerHTML = `
+      <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
+        ${ds.url || ""}
+      </small>
+      ${ds.name}
+    `;
+    div.onclick = () => renderFormulare(ds);
+    app.appendChild(div);
+  });
+}
+
+/* NEU: gemeinsame Match-Funktion */
+function matchesFormular(f, term, options) {
+  const t = term.toLowerCase();
+  let match = false;
+
+  if (options.byId && f.id && f.id.toLowerCase().includes(t)) match = true;
+  if (options.byName && f.name && f.name.toLowerCase().includes(t)) match = true;
+
+  if (options.byContent) {
+    if (f.items && f.items.some(i => (i || '').toLowerCase().includes(t))) {
+      match = true;
+    }
+    // Optional: Inhalte aus questionnaireFile durchsuchen
+  }
+  return match;
+}
+
+function renderFormulare(system) {
+  document.getElementById('search-container').style.display = 'none';
+  cameFromSearch = false;
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <h2>${system.name}</h2>
+    <button onclick="renderDemosysteme()">← Zurück</button>
+    <!-- System-spezifisches Suchfeld -->
+    <div id="system-search-container" class="search-container">
+      <input type="text" id="system-search" class="search-input"
+             placeholder="Formular in ${system.name} suchen..."
+             onkeyup="searchFormulareInSystem('${system.id}')">
+      <button id="clear-system-search" class="clear-search"
+              onclick="clearSystemSearch('${system.id}')">×</button>
+    </div>
+
+    <!-- NEU: System-Filter -->
+    <div id="system-search-filters"
+         style="max-width:400px;margin:8px auto 0 auto;font-size:0.85rem;">
+      <label>
+        <input type="checkbox" id="system-filter-title" checked>
+        Formulartitel
+      </label>
+      <label style="margin-left:12px;">
+        <input type="checkbox" id="system-filter-id" checked>
+        Formularname
+      </label>
+      <label style="margin-left:12px;">
+        <input type="checkbox" id="system-filter-content">
+        Formularinhalt
+      </label>
+    </div>
+
+    <div id="formular-list"></div>
+  `;
+  renderFormularListe(system, system.formulare);
+}
+
+function renderFormularListe(system, formularArray) {
+  const listDiv = document.getElementById('formular-list');
+  listDiv.innerHTML = '';
+  formularArray.forEach(f => {
+    const div = document.createElement('div');
+    div.className = 'formular';
+    const searchTerm = document.getElementById('system-search')?.value || '';
+    const highlightedId = highlightMatch(f.id, searchTerm);
+    const highlightedName = highlightMatch(f.name, searchTerm);
+    div.innerHTML = `
+      <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
+        ${highlightedId}
+      </small>
+      ${highlightedName}
+    `;
+    div.onclick = () => renderItems(system, f);
+    listDiv.appendChild(div);
+  });
+}
+
+/* GEÄNDERT: nutzt matchesFormular + System-Filter */
+function searchFormulareInSystem(systemId) {
+  const term = document.getElementById('system-search').value.toLowerCase();
+  const system = data.demosysteme.find(ds => ds.id === systemId);
+  if (!system) return;
+
+  const filterOptions = {
+    byName: document.getElementById('system-filter-title')?.checked ?? true,
+    byId: document.getElementById('system-filter-id')?.checked ?? true,
+    byContent: document.getElementById('system-filter-content')?.checked ?? false
+  };
+
+  const filtered = system.formulare.filter(f => matchesFormular(f, term, filterOptions));
+  renderFormularListe(system, filtered);
+  const btn = document.getElementById('clear-system-search');
+  btn.style.display = term ? 'block' : 'none';
+}
+
+function clearSystemSearch(systemId) {
+  document.getElementById('system-search').value = '';
+  searchFormulareInSystem(systemId);
+}
+
+function handleBack(systemId) {
+  if (cameFromSearch) {
+    document.getElementById('search').value = lastSearchTerm;
+    searchFormular();
+    return;
+  }
+  const ds = data.demosysteme.find(d => d.id === systemId);
+  if (ds) renderFormulare(ds);
+}
+
+function renderItems(system, formular) {
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <h2>${formular.name}</h2>
+    <button onclick="handleBack('${system.id}')">← Zurück</button>
+  `;
+
+  if (formular.questionnaireFile) {
+    fetch(formular.questionnaireFile)
       .then(response => response.json())
       .then(json => {
-        data = json;
-        renderDemosysteme();
+        const downloadBtn = document.createElement('button');
+        downloadBtn.textContent = 'download JSON';
+        downloadBtn.className = 'download-json';
+        downloadBtn.onclick = () => {
+          const filename = formular.questionnaireFile.split('/').pop();
+          const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = filename;
+          a.click();
+          URL.revokeObjectURL(url);
+        };
+        app.appendChild(downloadBtn);
+
+        const pre = document.createElement('pre');
+        const code = document.createElement('code');
+        code.textContent = JSON.stringify(json, null, 2);
+        pre.appendChild(code);
+        app.appendChild(pre);
+      })
+      .catch(error => {
+        app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
       });
+  } else if (formular.items && formular.items.length) {
+    const ul = document.createElement('ul');
+    ul.className = 'items';
+    formular.items.forEach(item => {
+      const searchTerm = document.getElementById('system-search')?.value || '';
+      const li = document.createElement('li');
+      li.innerHTML = highlightMatch(item, searchTerm);
+      ul.appendChild(li);
+    });
+    app.appendChild(ul);
+  }
+}
 
-    function renderDemosysteme() {
-      document.getElementById('search-container').style.display = 'block';
-      const app = document.getElementById('app');
-      app.innerHTML = '';
-      cameFromSearch = false;
-      toggleClearButton();
+/* GEÄNDERT: nutzt matchesFormular + globale Filter */
+function searchFormular() {
+  const term = document.getElementById('search').value.toLowerCase();
+  lastSearchTerm = term;
+  cameFromSearch = false;
+  toggleClearButton();
 
-      data.demosysteme.forEach(ds => {
-        const div = document.createElement('div');
-        div.className = 'system';
-        div.innerHTML = `
-          <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
-            ${ds.url || ""}
-          </small>
-          ${ds.name}
-        `;
-        div.onclick = () => renderFormulare(ds);
-        app.appendChild(div);
-      });
-    }
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  if (!term) return renderDemosysteme();
 
-    function renderFormulare(system) {
-      document.getElementById('search-container').style.display = 'none';
-      cameFromSearch = false;
+  const filterOptions = {
+    byName: document.getElementById('filter-title')?.checked ?? true,
+    byId: document.getElementById('filter-id')?.checked ?? true,
+    byContent: document.getElementById('filter-content')?.checked ?? false
+  };
 
-      const app = document.getElementById('app');
-      app.innerHTML = `
-        <h2>${system.name}</h2>
-        <button onclick="renderDemosysteme()">← Zurück</button>
-
-        <!-- System-spezifisches Suchfeld -->
-        <div id="system-search-container" class="search-container">
-          <input type="text" id="system-search" class="search-input"
-                 placeholder="Formular in ${system.name} suchen..."
-                 onkeyup="searchFormulareInSystem('${system.id}')">
-          <button id="clear-system-search" class="clear-search"
-                  onclick="clearSystemSearch('${system.id}')">×</button>
-        </div>
-
-        <div id="formular-list"></div>
-      `;
-
-      renderFormularListe(system, system.formulare);
-    }
-
-    function renderFormularListe(system, formularArray) {
-      const listDiv = document.getElementById('formular-list');
-      listDiv.innerHTML = '';
-
-      formularArray.forEach(f => {
+  data.demosysteme.forEach(ds => {
+    ds.formulare.forEach(f => {
+      if (matchesFormular(f, term, filterOptions)) {
         const div = document.createElement('div');
         div.className = 'formular';
-
-        const searchTerm = document.getElementById('system-search')?.value || '';
-        const highlightedId = highlightMatch(f.id, searchTerm);
-        const highlightedName = highlightMatch(f.name, searchTerm);
-
+        const highlightedId = highlightMatch(f.id, term);
+        const highlightedName = highlightMatch(f.name, term);
         div.innerHTML = `
-          <small style="color:#888; display:block; margin-bottom:4px; font-size:0.75rem;">
+          <small style="color:#888; display:block; font-size:0.75rem;">
             ${highlightedId}
           </small>
           ${highlightedName}
+          <span style="font-size:0.85rem; font-style:italic; color:#555;">
+            (System: ${ds.name})
+          </span>
         `;
-
-        div.onclick = () => renderItems(system, f);
-        listDiv.appendChild(div);
-      });
-    }
-
-    function searchFormulareInSystem(systemId) {
-      const term = document.getElementById('system-search').value.toLowerCase();
-      const system = data.demosysteme.find(ds => ds.id === systemId);
-      if (!system) return;
-
-      const filtered = system.formulare.filter(f => {
-        return f.id.toLowerCase().includes(term) ||
-               f.name.toLowerCase().includes(term) ||
-               (f.items && f.items.some(i => i.toLowerCase().includes(term)));
-      });
-
-      renderFormularListe(system, filtered);
-
-      const btn = document.getElementById('clear-system-search');
-      btn.style.display = term ? 'block' : 'none';
-    }
-
-    function clearSystemSearch(systemId) {
-      document.getElementById('system-search').value = '';
-      searchFormulareInSystem(systemId);
-    }
-
-    function handleBack(systemId) {
-      if (cameFromSearch) {
-        document.getElementById('search').value = lastSearchTerm;
-        searchFormular();
-        return;
+        div.onclick = () => {
+          cameFromSearch = true;
+          renderItems(ds, f);
+        };
+        app.appendChild(div);
       }
-      const ds = data.demosysteme.find(d => d.id === systemId);
-      if (ds) renderFormulare(ds);
-    }
+    });
+  });
+}
 
-    function renderItems(system, formular) {
-      const app = document.getElementById('app');
-      app.innerHTML = `
-        <h2>${formular.name}</h2>
-        <button onclick="handleBack('${system.id}')">← Zurück</button>
-      `;
+function highlightMatch(text, term) {
+  if (!term || !text) return text;
+  const regex = new RegExp(`(${term})`, 'gi');
+  return text.replace(regex, `<mark class="search-highlight">$1</mark>`);
+}
 
-      if (formular.questionnaireFile) {
-        fetch(formular.questionnaireFile)
-          .then(response => response.json())
-          .then(json => {
-            const downloadBtn = document.createElement('button');
-            downloadBtn.textContent = 'download JSON';
-            downloadBtn.className = 'download-json';
-            downloadBtn.onclick = () => {
-              const filename = formular.questionnaireFile.split('/').pop();
-              const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
-              const url = URL.createObjectURL(blob);
-              const a = document.createElement('a');
-              a.href = url;
-              a.download = filename;
-              a.click();
-              URL.revokeObjectURL(url);
-            };
-            app.appendChild(downloadBtn);
+function clearSearch() {
+  document.getElementById('search').value = '';
+  lastSearchTerm = '';
+  cameFromSearch = false;
+  toggleClearButton();
+  renderDemosysteme();
+}
 
-            const pre = document.createElement('pre');
-            const code = document.createElement('code');
-            code.textContent = JSON.stringify(json, null, 2);
-            pre.appendChild(code);
-            app.appendChild(pre);
-          })
-          .catch(error => {
-            app.innerHTML += `<p style="color: red;">Fehler beim Laden: ${error.message}</p>`;
-          });
-      } else if (formular.items && formular.items.length) {
-        const ul = document.createElement('ul');
-        ul.className = 'items';
-        formular.items.forEach(item => {
-          const searchTerm = document.getElementById('system-search')?.value || '';
-          const li = document.createElement('li');
-          li.innerHTML = highlightMatch(item, searchTerm);
-          ul.appendChild(li);
-        });
-        app.appendChild(ul);
-      }
-    }
-
-    function searchFormular() {
-      const term = document.getElementById('search').value.toLowerCase();
-      lastSearchTerm = term;
-      cameFromSearch = false;
-      toggleClearButton();
-
-      const app = document.getElementById('app');
-      app.innerHTML = '';
-
-      if (!term) return renderDemosysteme();
-
-      data.demosysteme.forEach(ds => {
-        ds.formulare.forEach(f => {
-          if (
-            f.id.toLowerCase().includes(term) ||
-            f.name.toLowerCase().includes(term) ||
-            (f.items && f.items.some(i => i.toLowerCase().includes(term)))
-          ) {
-            const div = document.createElement('div');
-            div.className = 'formular';
-
-            const highlightedId = highlightMatch(f.id, term);
-            const highlightedName = highlightMatch(f.name, term);
-
-            div.innerHTML = `
-              <small style="color:#888; display:block; font-size:0.75rem;">
-                ${highlightedId}
-              </small>
-              ${highlightedName} <span style="font-size:0.85rem; font-style:italic; color:#555;">(System: ${ds.name})</span>
-            `;
-
-            div.onclick = () => {
-              cameFromSearch = true;
-              renderItems(ds, f);
-            };
-            app.appendChild(div);
-          }
-        });
-      });
-    }
-
-    function highlightMatch(text, term) {
-      if (!term || !text) return text;
-      const regex = new RegExp(`(${term})`, 'gi');
-      return text.replace(regex, `<mark class="search-highlight">$1</mark>`);
-    }
-
-    function clearSearch() {
-      document.getElementById('search').value = '';
-      lastSearchTerm = '';
-      cameFromSearch = false;
-      toggleClearButton();
-      renderDemosysteme();
-    }
-
-    function toggleClearButton() {
-      const btn = document.getElementById('clear-search');
-      btn.style.display = document.getElementById('search').value ? 'block' : 'none';
-    }
-  </script>
-</body>
-</html>
+function toggleClearButton() {
+  const btn = document.getElementById('clear-search');
+  btn.style.display = document.getElementById('search').value ? 'block' : 'none';
+}
+</script>
