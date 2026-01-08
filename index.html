@@ -172,8 +172,7 @@
       renderFormularListe(system, system.formulare);
     }
 
-    function renderFormularListe(system, formularArray) {
-      function matchesFormular(f, term, options) {
+    function matchesFormular(f, term, options) {
       const t = term.toLowerCase();
       let match = false;
     
@@ -189,7 +188,8 @@
     
       return match;
     }
-
+    
+    function renderFormularListe(system, formularArray) {
       const listDiv = document.getElementById('formular-list');
       listDiv.innerHTML = '';
 
@@ -364,4 +364,5 @@
   </script>
 </body>
 </html>
+
 
